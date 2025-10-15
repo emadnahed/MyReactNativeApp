@@ -19,6 +19,7 @@
     "reset:watchman": "watchman watch-del-all",
     "reset:metro": "rm -rf $TMPDIR/metro-* && rm -rf $TMPDIR/react-* && npx react-native start --reset-cache",
     "clean:ios": "cd ios && rm -rf build/ && (rm -rf ~/Library/Developer/Xcode/DerivedData/MyReactNativeApp-* 2>/dev/null || true) && cd ..",
+    "setup-icons": "node scripts/setup-icons.js",
     "clean:pods": "cd ios && rm -rf Pods/ Podfile.lock && pod cache clean --all && pod install && cd .."
   },
   "dependencies": {
