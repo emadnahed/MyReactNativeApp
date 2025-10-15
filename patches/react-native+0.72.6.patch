@@ -1,0 +1,844 @@
+diff --git a/node_modules/react-native/Libraries/ActionSheetIOS/React-RCTActionSheet.podspec b/node_modules/react-native/Libraries/ActionSheetIOS/React-RCTActionSheet.podspec
+index 5cad0ca..e25289a 100644
+--- a/node_modules/react-native/Libraries/ActionSheetIOS/React-RCTActionSheet.podspec
++++ b/node_modules/react-native/Libraries/ActionSheetIOS/React-RCTActionSheet.podspec
+@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
+   s.documentation_url      = "https://reactnative.dev/docs/actionsheetios"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.source_files           = "*.{m}"
+   s.preserve_paths         = "package.json", "LICENSE", "LICENSE-docs"
+diff --git a/node_modules/react-native/Libraries/AppDelegate/React-RCTAppDelegate.podspec b/node_modules/react-native/Libraries/AppDelegate/React-RCTAppDelegate.podspec
+index 1c1ae9b..a60c948 100644
+--- a/node_modules/react-native/Libraries/AppDelegate/React-RCTAppDelegate.podspec
++++ b/node_modules/react-native/Libraries/AppDelegate/React-RCTAppDelegate.podspec
+@@ -60,7 +60,7 @@ Pod::Spec.new do |s|
+   s.documentation_url      = "https://reactnative.dev/docs/actionsheetios"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.source_files            = "**/*.{c,h,m,mm,S,cpp}"
+ 
+diff --git a/node_modules/react-native/Libraries/Blob/React-RCTBlob.podspec b/node_modules/react-native/Libraries/Blob/React-RCTBlob.podspec
+index 2cbb75d..14d06d4 100644
+--- a/node_modules/react-native/Libraries/Blob/React-RCTBlob.podspec
++++ b/node_modules/react-native/Libraries/Blob/React-RCTBlob.podspec
+@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.compiler_flags         = folly_compiler_flags + ' -Wno-nullability-completeness'
+   s.source                 = source
+   s.source_files           = "*.{h,m,mm}"
+diff --git a/node_modules/react-native/Libraries/FBLazyVector/FBLazyVector.podspec b/node_modules/react-native/Libraries/FBLazyVector/FBLazyVector.podspec
+index b8473d5..d1afcb6 100644
+--- a/node_modules/react-native/Libraries/FBLazyVector/FBLazyVector.podspec
++++ b/node_modules/react-native/Libraries/FBLazyVector/FBLazyVector.podspec
+@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.source_files           = "**/*.{c,h,m,mm,cpp}"
+   s.header_dir             = "FBLazyVector"
+diff --git a/node_modules/react-native/Libraries/Image/React-RCTImage.podspec b/node_modules/react-native/Libraries/Image/React-RCTImage.podspec
+index c7779c6..62df087 100644
+--- a/node_modules/react-native/Libraries/Image/React-RCTImage.podspec
++++ b/node_modules/react-native/Libraries/Image/React-RCTImage.podspec
+@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
+   s.documentation_url      = "https://reactnative.dev/docs/image"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.compiler_flags         = folly_compiler_flags + ' -Wno-nullability-completeness'
+   s.source                 = source
+   s.source_files           = "*.{m,mm}"
+diff --git a/node_modules/react-native/Libraries/LinkingIOS/React-RCTLinking.podspec b/node_modules/react-native/Libraries/LinkingIOS/React-RCTLinking.podspec
+index 9c03c13..1cafb40 100644
+--- a/node_modules/react-native/Libraries/LinkingIOS/React-RCTLinking.podspec
++++ b/node_modules/react-native/Libraries/LinkingIOS/React-RCTLinking.podspec
+@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
+   s.documentation_url      = "https://reactnative.dev/docs/linking"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.compiler_flags         = folly_compiler_flags + ' -Wno-nullability-completeness'
+   s.source                 = source
+   s.source_files           = "*.{m,mm}"
+diff --git a/node_modules/react-native/Libraries/NativeAnimation/React-RCTAnimation.podspec b/node_modules/react-native/Libraries/NativeAnimation/React-RCTAnimation.podspec
+index 9660837..ad00df7 100644
+--- a/node_modules/react-native/Libraries/NativeAnimation/React-RCTAnimation.podspec
++++ b/node_modules/react-native/Libraries/NativeAnimation/React-RCTAnimation.podspec
+@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.compiler_flags         = folly_compiler_flags + ' -Wno-nullability-completeness'
+   s.source                 = source
+   s.source_files           = "**/*.{h,m,mm}"
+diff --git a/node_modules/react-native/Libraries/Network/React-RCTNetwork.podspec b/node_modules/react-native/Libraries/Network/React-RCTNetwork.podspec
+index 05513c9..da7750c 100644
+--- a/node_modules/react-native/Libraries/Network/React-RCTNetwork.podspec
++++ b/node_modules/react-native/Libraries/Network/React-RCTNetwork.podspec
+@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.compiler_flags         = folly_compiler_flags + ' -Wno-nullability-completeness'
+   s.source                 = source
+   s.source_files           = "*.{m,mm}"
+diff --git a/node_modules/react-native/Libraries/PushNotificationIOS/React-RCTPushNotification.podspec b/node_modules/react-native/Libraries/PushNotificationIOS/React-RCTPushNotification.podspec
+index e9549ee..e064598 100644
+--- a/node_modules/react-native/Libraries/PushNotificationIOS/React-RCTPushNotification.podspec
++++ b/node_modules/react-native/Libraries/PushNotificationIOS/React-RCTPushNotification.podspec
+@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
+   s.documentation_url      = "https://reactnative.dev/docs/pushnotificationios"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.compiler_flags         = folly_compiler_flags + ' -Wno-nullability-completeness'
+   s.source                 = source
+   s.source_files           = "*.{m,mm}"
+diff --git a/node_modules/react-native/Libraries/RCTRequired/RCTRequired.podspec b/node_modules/react-native/Libraries/RCTRequired/RCTRequired.podspec
+index dc38d2a..589cb8f 100644
+--- a/node_modules/react-native/Libraries/RCTRequired/RCTRequired.podspec
++++ b/node_modules/react-native/Libraries/RCTRequired/RCTRequired.podspec
+@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.source_files           = "**/*.{c,h,m,mm,cpp}"
+   s.header_dir             = "RCTRequired"
+diff --git a/node_modules/react-native/Libraries/Settings/React-RCTSettings.podspec b/node_modules/react-native/Libraries/Settings/React-RCTSettings.podspec
+index aa6c9f4..cfea4af 100644
+--- a/node_modules/react-native/Libraries/Settings/React-RCTSettings.podspec
++++ b/node_modules/react-native/Libraries/Settings/React-RCTSettings.podspec
+@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
+   s.documentation_url      = "https://reactnative.dev/docs/settings"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.compiler_flags         = folly_compiler_flags + ' -Wno-nullability-completeness'
+   s.source                 = source
+   s.source_files           = "*.{m,mm}"
+diff --git a/node_modules/react-native/Libraries/Text/React-RCTText.podspec b/node_modules/react-native/Libraries/Text/React-RCTText.podspec
+index 091ccea..fc2b70b 100644
+--- a/node_modules/react-native/Libraries/Text/React-RCTText.podspec
++++ b/node_modules/react-native/Libraries/Text/React-RCTText.podspec
+@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
+   s.documentation_url      = "https://reactnative.dev/docs/text"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.source_files           = "**/*.{h,m}"
+   s.preserve_paths         = "package.json", "LICENSE", "LICENSE-docs"
+diff --git a/node_modules/react-native/Libraries/TypeSafety/RCTTypeSafety.podspec b/node_modules/react-native/Libraries/TypeSafety/RCTTypeSafety.podspec
+index 79c04d0..5a4f291 100644
+--- a/node_modules/react-native/Libraries/TypeSafety/RCTTypeSafety.podspec
++++ b/node_modules/react-native/Libraries/TypeSafety/RCTTypeSafety.podspec
+@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.source_files           = "**/*.{c,h,m,mm,cpp}"
+   s.header_dir             = "RCTTypeSafety"
+diff --git a/node_modules/react-native/Libraries/Vibration/React-RCTVibration.podspec b/node_modules/react-native/Libraries/Vibration/React-RCTVibration.podspec
+index c0f2211..19a0aae 100644
+--- a/node_modules/react-native/Libraries/Vibration/React-RCTVibration.podspec
++++ b/node_modules/react-native/Libraries/Vibration/React-RCTVibration.podspec
+@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
+   s.documentation_url      = "https://reactnative.dev/docs/vibration"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.compiler_flags         = folly_compiler_flags + ' -Wno-nullability-completeness'
+   s.source                 = source
+   s.source_files           = "*.{m,mm}"
+diff --git a/node_modules/react-native/React-Core.podspec b/node_modules/react-native/React-Core.podspec
+index 56b9bc0..93df42e 100644
+--- a/node_modules/react-native/React-Core.podspec
++++ b/node_modules/react-native/React-Core.podspec
+@@ -67,7 +67,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.resource_bundle        = { "AccessibilityResources" => ["React/AccessibilityResources/*.lproj"]}
+   s.compiler_flags         = folly_compiler_flags + ' ' + boost_compiler_flags
+diff --git a/node_modules/react-native/React.podspec b/node_modules/react-native/React.podspec
+index 0ea4f42..c206fbd 100644
+--- a/node_modules/react-native/React.podspec
++++ b/node_modules/react-native/React.podspec
+@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.preserve_paths         = "package.json", "LICENSE", "LICENSE-docs"
+   s.cocoapods_version      = ">= 1.10.1"
+diff --git a/node_modules/react-native/React/CoreModules/React-CoreModules.podspec b/node_modules/react-native/React/CoreModules/React-CoreModules.podspec
+index 10d555e..42809a4 100644
+--- a/node_modules/react-native/React/CoreModules/React-CoreModules.podspec
++++ b/node_modules/react-native/React/CoreModules/React-CoreModules.podspec
+@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.compiler_flags         = folly_compiler_flags + ' -Wno-nullability-completeness'
+   s.source                 = source
+   s.source_files           = "**/*.{c,m,mm,cpp}"
+diff --git a/node_modules/react-native/React/FBReactNativeSpec/FBReactNativeSpec.podspec b/node_modules/react-native/React/FBReactNativeSpec/FBReactNativeSpec.podspec
+index 2d9b0b2..527ee68 100644
+--- a/node_modules/react-native/React/FBReactNativeSpec/FBReactNativeSpec.podspec
++++ b/node_modules/react-native/React/FBReactNativeSpec/FBReactNativeSpec.podspec
+@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.compiler_flags         = folly_compiler_flags + ' -Wno-nullability-completeness'
+   s.source                 = source
+   # This podspec is used to trigger the codegen, and built files are generated in a different location.
+diff --git a/node_modules/react-native/React/React-RCTFabric.podspec b/node_modules/react-native/React/React-RCTFabric.podspec
+index 7483259..df2ba73 100644
+--- a/node_modules/react-native/React/React-RCTFabric.podspec
++++ b/node_modules/react-native/React/React-RCTFabric.podspec
+@@ -52,7 +52,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.source_files           = "Fabric/**/*.{c,h,m,mm,S,cpp}"
+   s.exclude_files          = "**/tests/*",
+diff --git a/node_modules/react-native/ReactCommon/React-Fabric.podspec b/node_modules/react-native/ReactCommon/React-Fabric.podspec
+index 0644c97..af08a7c 100644
+--- a/node_modules/react-native/ReactCommon/React-Fabric.podspec
++++ b/node_modules/react-native/ReactCommon/React-Fabric.podspec
+@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.source_files           = "dummyFile.cpp"
+   s.pod_target_xcconfig = { "USE_HEADERMAP" => "YES",
+diff --git a/node_modules/react-native/ReactCommon/React-rncore.podspec b/node_modules/react-native/ReactCommon/React-rncore.podspec
+index 9ff023c..91949ff 100644
+--- a/node_modules/react-native/ReactCommon/React-rncore.podspec
++++ b/node_modules/react-native/ReactCommon/React-rncore.podspec
+@@ -44,7 +44,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.source_files           = "dummyFile.cpp"
+   s.pod_target_xcconfig = { "USE_HEADERMAP" => "YES",
+diff --git a/node_modules/react-native/ReactCommon/ReactCommon.podspec b/node_modules/react-native/ReactCommon/ReactCommon.podspec
+index 2953f2d..56a76c1 100644
+--- a/node_modules/react-native/ReactCommon/ReactCommon.podspec
++++ b/node_modules/react-native/ReactCommon/ReactCommon.podspec
+@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.header_dir             = "ReactCommon" # Use global header_dir for all subspecs for use_frameworks! compatibility
+   s.compiler_flags         = folly_compiler_flags + ' ' + boost_compiler_flags
+diff --git a/node_modules/react-native/ReactCommon/callinvoker/React-callinvoker.podspec b/node_modules/react-native/ReactCommon/callinvoker/React-callinvoker.podspec
+index dbff635..dd87aa4 100644
+--- a/node_modules/react-native/ReactCommon/callinvoker/React-callinvoker.podspec
++++ b/node_modules/react-native/ReactCommon/callinvoker/React-callinvoker.podspec
+@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.source_files           = "**/*.{cpp,h}"
+   s.header_dir             = "ReactCommon"
+diff --git a/node_modules/react-native/ReactCommon/cxxreact/React-cxxreact.podspec b/node_modules/react-native/ReactCommon/cxxreact/React-cxxreact.podspec
+index d455d2b..e641da3 100644
+--- a/node_modules/react-native/ReactCommon/cxxreact/React-cxxreact.podspec
++++ b/node_modules/react-native/ReactCommon/cxxreact/React-cxxreact.podspec
+@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.source_files           = "*.{cpp,h}"
+   s.exclude_files          = "SampleCxxModule.*"
+diff --git a/node_modules/react-native/ReactCommon/hermes/React-hermes.podspec b/node_modules/react-native/ReactCommon/hermes/React-hermes.podspec
+index 425ef3c..6cf5f9f 100644
+--- a/node_modules/react-native/ReactCommon/hermes/React-hermes.podspec
++++ b/node_modules/react-native/ReactCommon/hermes/React-hermes.podspec
+@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package['license']
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :osx => "10.14", :ios => "12.4" }
++  s.platforms              = { :osx => "10.14", :ios => "12.0" }
+   s.source                 = source
+   s.source_files           = "executor/*.{cpp,h}",
+                              "inspector/*.{cpp,h}",
+diff --git a/node_modules/react-native/ReactCommon/jsc/React-jsc.podspec b/node_modules/react-native/ReactCommon/jsc/React-jsc.podspec
+index ac0e785..3b4598d 100644
+--- a/node_modules/react-native/ReactCommon/jsc/React-jsc.podspec
++++ b/node_modules/react-native/ReactCommon/jsc/React-jsc.podspec
+@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.source_files           = "JSCRuntime.{cpp,h}"
+   s.exclude_files          = "**/test/*"
+diff --git a/node_modules/react-native/ReactCommon/jsi/React-jsi.podspec b/node_modules/react-native/ReactCommon/jsi/React-jsi.podspec
+index e7c49d2..0adbfd3 100644
+--- a/node_modules/react-native/ReactCommon/jsi/React-jsi.podspec
++++ b/node_modules/react-native/ReactCommon/jsi/React-jsi.podspec
+@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+ 
+   s.header_dir    = "jsi"
+diff --git a/node_modules/react-native/ReactCommon/jsiexecutor/React-jsiexecutor.podspec b/node_modules/react-native/ReactCommon/jsiexecutor/React-jsiexecutor.podspec
+index e97969d..5dcce39 100644
+--- a/node_modules/react-native/ReactCommon/jsiexecutor/React-jsiexecutor.podspec
++++ b/node_modules/react-native/ReactCommon/jsiexecutor/React-jsiexecutor.podspec
+@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.source_files         = "jsireact/*.{cpp,h}"
+   s.compiler_flags         = folly_compiler_flags + ' ' + boost_compiler_flags
+diff --git a/node_modules/react-native/ReactCommon/jsinspector/React-jsinspector.podspec b/node_modules/react-native/ReactCommon/jsinspector/React-jsinspector.podspec
+index 4b6d9a9..97d20b3 100644
+--- a/node_modules/react-native/ReactCommon/jsinspector/React-jsinspector.podspec
++++ b/node_modules/react-native/ReactCommon/jsinspector/React-jsinspector.podspec
+@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.source_files           = "*.{cpp,h}"
+   s.header_dir             = 'jsinspector'
+diff --git a/node_modules/react-native/ReactCommon/logger/React-logger.podspec b/node_modules/react-native/ReactCommon/logger/React-logger.podspec
+index 17c2856..3807dc7 100644
+--- a/node_modules/react-native/ReactCommon/logger/React-logger.podspec
++++ b/node_modules/react-native/ReactCommon/logger/React-logger.podspec
+@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.source_files           = "*.{cpp,h}"
+   s.exclude_files          = "SampleCxxModule.*"
+diff --git a/node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios/React-NativeModulesApple.podspec b/node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios/React-NativeModulesApple.podspec
+index bf36f73..efe63a5 100644
+--- a/node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios/React-NativeModulesApple.podspec
++++ b/node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios/React-NativeModulesApple.podspec
+@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
+     s.homepage               = "https://reactnative.dev/"
+     s.license                = package["license"]
+     s.author                 = "Meta Platforms, Inc. and its affiliates"
+-    s.platforms              = { :ios => "12.4" }
++    s.platforms              = { :ios => "12.0" }
+     s.source                 = source
+     s.compiler_flags         = folly_compiler_flags + ' ' + boost_compiler_flags
+     s.pod_target_xcconfig    = { "HEADER_SEARCH_PATHS" => "\"$(PODS_ROOT)/boost\" \"$(PODS_ROOT)/RCT-Folly\" \"$(PODS_ROOT)/DoubleConversion\" \"$(PODS_ROOT)/Headers/Private/React-Core\"",
+diff --git a/node_modules/react-native/ReactCommon/react/nativemodule/samples/ReactCommon-Samples.podspec b/node_modules/react-native/ReactCommon/react/nativemodule/samples/ReactCommon-Samples.podspec
+index a9a362f..8825e84 100644
+--- a/node_modules/react-native/ReactCommon/react/nativemodule/samples/ReactCommon-Samples.podspec
++++ b/node_modules/react-native/ReactCommon/react/nativemodule/samples/ReactCommon-Samples.podspec
+@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.compiler_flags         = folly_compiler_flags + ' ' + boost_compiler_flags
+   s.pod_target_xcconfig    = { "HEADER_SEARCH_PATHS" => "\"$(PODS_ROOT)/boost\" \"$(PODS_ROOT)/RCT-Folly\" \"$(PODS_ROOT)/DoubleConversion\" \"$(PODS_ROOT)/Headers/Private/React-Core\" \"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers\"",
+diff --git a/node_modules/react-native/ReactCommon/react/renderer/components/rncore/ComponentDescriptors.h b/node_modules/react-native/ReactCommon/react/renderer/components/rncore/ComponentDescriptors.h
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native/ReactCommon/react/renderer/components/rncore/EventEmitters.cpp b/node_modules/react-native/ReactCommon/react/renderer/components/rncore/EventEmitters.cpp
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native/ReactCommon/react/renderer/components/rncore/EventEmitters.h b/node_modules/react-native/ReactCommon/react/renderer/components/rncore/EventEmitters.h
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native/ReactCommon/react/renderer/components/rncore/Props.cpp b/node_modules/react-native/ReactCommon/react/renderer/components/rncore/Props.cpp
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native/ReactCommon/react/renderer/components/rncore/Props.h b/node_modules/react-native/ReactCommon/react/renderer/components/rncore/Props.h
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native/ReactCommon/react/renderer/components/rncore/RCTComponentViewHelpers.h b/node_modules/react-native/ReactCommon/react/renderer/components/rncore/RCTComponentViewHelpers.h
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native/ReactCommon/react/renderer/components/rncore/ShadowNodes.cpp b/node_modules/react-native/ReactCommon/react/renderer/components/rncore/ShadowNodes.cpp
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native/ReactCommon/react/renderer/components/rncore/ShadowNodes.h b/node_modules/react-native/ReactCommon/react/renderer/components/rncore/ShadowNodes.h
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native/ReactCommon/react/renderer/components/rncore/States.cpp b/node_modules/react-native/ReactCommon/react/renderer/components/rncore/States.cpp
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native/ReactCommon/react/renderer/components/rncore/States.h b/node_modules/react-native/ReactCommon/react/renderer/components/rncore/States.h
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/react-native/ReactCommon/react/renderer/graphics/React-graphics.podspec b/node_modules/react-native/ReactCommon/react/renderer/graphics/React-graphics.podspec
+index 19cc4ea..9632fac 100644
+--- a/node_modules/react-native/ReactCommon/react/renderer/graphics/React-graphics.podspec
++++ b/node_modules/react-native/ReactCommon/react/renderer/graphics/React-graphics.podspec
+@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.compiler_flags         = folly_compiler_flags + ' ' + boost_compiler_flags
+   s.source_files           = source_files
+diff --git a/node_modules/react-native/ReactCommon/react/renderer/imagemanager/platform/ios/React-ImageManager.podspec b/node_modules/react-native/ReactCommon/react/renderer/imagemanager/platform/ios/React-ImageManager.podspec
+index b9c34a9..b720b90 100644
+--- a/node_modules/react-native/ReactCommon/react/renderer/imagemanager/platform/ios/React-ImageManager.podspec
++++ b/node_modules/react-native/ReactCommon/react/renderer/imagemanager/platform/ios/React-ImageManager.podspec
+@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.compiler_flags         = folly_compiler_flags + ' ' + boost_compiler_flags
+   s.source_files           = source_files
+diff --git a/node_modules/react-native/ReactCommon/reactperflogger/React-perflogger.podspec b/node_modules/react-native/ReactCommon/reactperflogger/React-perflogger.podspec
+index 37a372c..b557f3c 100644
+--- a/node_modules/react-native/ReactCommon/reactperflogger/React-perflogger.podspec
++++ b/node_modules/react-native/ReactCommon/reactperflogger/React-perflogger.podspec
+@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.source_files           = "**/*.{cpp,h}"
+   s.header_dir             = "reactperflogger"
+diff --git a/node_modules/react-native/ReactCommon/runtimeexecutor/React-runtimeexecutor.podspec b/node_modules/react-native/ReactCommon/runtimeexecutor/React-runtimeexecutor.podspec
+index 2a36877..f4f1b27 100644
+--- a/node_modules/react-native/ReactCommon/runtimeexecutor/React-runtimeexecutor.podspec
++++ b/node_modules/react-native/ReactCommon/runtimeexecutor/React-runtimeexecutor.podspec
+@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
+   s.homepage               = "https://reactnative.dev/"
+   s.license                = package["license"]
+   s.author                 = "Meta Platforms, Inc. and its affiliates"
+-  s.platforms              = { :ios => "12.4" }
++  s.platforms              = { :ios => "12.0" }
+   s.source                 = source
+   s.source_files           = "**/*.{cpp,h}"
+   s.header_dir             = "ReactCommon"
+diff --git a/node_modules/react-native/ReactCommon/yoga/Yoga.podspec b/node_modules/react-native/ReactCommon/yoga/Yoga.podspec
+index 8ddf0bd..83fa70f 100644
+--- a/node_modules/react-native/ReactCommon/yoga/Yoga.podspec
++++ b/node_modules/react-native/ReactCommon/yoga/Yoga.podspec
+@@ -43,7 +43,7 @@ Pod::Spec.new do |spec|
+   ]
+ 
+   # Pinning to the same version as React.podspec.
+-  spec.platforms = { :ios => "12.4" }
++  spec.platforms = { :ios => "12.0" }
+ 
+   # Set this environment variable when *not* using the `:path` option to install the pod.
+   # E.g. when publishing this spec to a spec repo.
+diff --git a/node_modules/react-native/scripts/cocoapods/helpers.rb b/node_modules/react-native/scripts/cocoapods/helpers.rb
+index 6d2a58d..bb6c9fb 100644
+--- a/node_modules/react-native/scripts/cocoapods/helpers.rb
++++ b/node_modules/react-native/scripts/cocoapods/helpers.rb
+@@ -38,7 +38,7 @@ end
+ module Helpers
+     class Constants
+         def self.min_ios_version_supported
+-            return '12.4'
++            return '12.0'
+         end
+     end
+ end
+diff --git a/node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec b/node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec
+index 87d0710..7521588 100644
+--- a/node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec
++++ b/node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec
+@@ -34,7 +34,7 @@ Pod::Spec.new do |spec|
+   spec.license     = package['license']
+   spec.author      = "Facebook"
+   spec.source      = source
+-  spec.platforms   = { :osx => "10.13", :ios => "12.4" }
++  spec.platforms   = { :osx => "10.13", :ios => "12.0" }
+ 
+   spec.preserve_paths      = '**/*.*'
+   spec.source_files        = ''
+diff --git a/node_modules/react-native/sdks/hermes/hermes-engine.podspec b/node_modules/react-native/sdks/hermes/hermes-engine.podspec
+new file mode 100644
+index 0000000..7521588
+--- /dev/null
++++ b/node_modules/react-native/sdks/hermes/hermes-engine.podspec
+@@ -0,0 +1,114 @@
++# Copyright (c) Meta Platforms, Inc. and affiliates.
++#
++# This source code is licensed under the MIT license found in the
++# LICENSE file in the root directory of this source tree.
++
++require "json"
++require_relative "./hermes-utils.rb"
++
++react_native_path = File.join(__dir__, "..", "..")
++
++# Whether Hermes is built for Release or Debug is determined by the PRODUCTION envvar.
++build_type = ENV['PRODUCTION'] == "1" ? :release : :debug
++
++# package.json
++package = JSON.parse(File.read(File.join(react_native_path, "package.json")))
++version = package['version']
++
++# sdks/.hermesversion
++hermestag_file = File.join(react_native_path, "sdks", ".hermesversion")
++build_from_source = ENV['BUILD_FROM_SOURCE'] === 'true'
++
++git = "https://github.com/facebook/hermes.git"
++
++abort_if_invalid_tarball_provided!
++
++source = compute_hermes_source(build_from_source, hermestag_file, git, version, build_type, react_native_path)
++
++Pod::Spec.new do |spec|
++  spec.name        = "hermes-engine"
++  spec.version     = version
++  spec.summary     = "Hermes is a small and lightweight JavaScript engine optimized for running React Native."
++  spec.description = "Hermes is a JavaScript engine optimized for fast start-up of React Native apps. It features ahead-of-time static optimization and compact bytecode."
++  spec.homepage    = "https://hermesengine.dev"
++  spec.license     = package['license']
++  spec.author      = "Facebook"
++  spec.source      = source
++  spec.platforms   = { :osx => "10.13", :ios => "12.0" }
++
++  spec.preserve_paths      = '**/*.*'
++  spec.source_files        = ''
++
++  spec.pod_target_xcconfig = {
++                    "CLANG_CXX_LANGUAGE_STANDARD" => "c++17",
++                    "CLANG_CXX_LIBRARY" => "compiler-default"
++                  }.merge!(build_type == :debug ? { "GCC_PREPROCESSOR_DEFINITIONS" => "HERMES_ENABLE_DEBUGGER=1" } : {})
++
++  spec.ios.vendored_frameworks = "destroot/Library/Frameworks/ios/hermes.framework"
++  spec.osx.vendored_frameworks = "destroot/Library/Frameworks/macosx/hermes.framework"
++
++  if source[:http] then
++
++    spec.subspec 'Pre-built' do |ss|
++      ss.preserve_paths = ["destroot/bin/*"].concat(build_type == :debug ? ["**/*.{h,c,cpp}"] : [])
++      ss.source_files = "destroot/include/**/*.h"
++      ss.exclude_files = ["destroot/include/jsi/jsi/JSIDynamic.{h,cpp}", "destroot/include/jsi/jsi/jsilib-*.{h,cpp}"]
++      ss.header_mappings_dir = "destroot/include"
++      ss.ios.vendored_frameworks = "destroot/Library/Frameworks/universal/hermes.xcframework"
++      ss.osx.vendored_frameworks = "destroot/Library/Frameworks/macosx/hermes.framework"
++    end
++
++  elsif source[:git] then
++
++    spec.subspec 'Hermes' do |ss|
++      ss.source_files = ''
++      ss.public_header_files = 'API/hermes/*.h'
++      ss.header_dir = 'hermes'
++    end
++
++    spec.subspec 'JSI' do |ss|
++      ss.source_files = ''
++      ss.public_header_files = 'API/jsi/jsi/*.h'
++      ss.header_dir = 'jsi'
++    end
++
++    spec.subspec 'Public' do |ss|
++      ss.source_files = ''
++      ss.public_header_files = 'public/hermes/Public/*.h'
++      ss.header_dir = 'hermes/Public'
++    end
++
++    hermesc_path = "${PODS_ROOT}/hermes-engine/build_host_hermesc"
++
++    if ENV.has_key?('HERMES_OVERRIDE_HERMESC_PATH') && File.exist?(ENV['HERMES_OVERRIDE_HERMESC_PATH']) then
++      hermesc_path = ENV['HERMES_OVERRIDE_HERMESC_PATH']
++    end
++
++    spec.user_target_xcconfig = {
++      'HERMES_CLI_PATH' => "#{hermesc_path}/bin/hermesc"
++    }
++
++    spec.prepare_command = ". #{react_native_path}/sdks/hermes-engine/utils/create-dummy-hermes-xcframework.sh"
++
++    CMAKE_BINARY = %x(command -v cmake | tr -d '\n')
++    # NOTE: Script phases are sorted alphabetically inside Xcode project
++    spec.script_phases = [
++      {
++        :name => '[RN] [1] Build Hermesc',
++        :script => <<-EOS
++        . ${PODS_ROOT}/../.xcode.env
++        export CMAKE_BINARY=${CMAKE_BINARY:-#{CMAKE_BINARY}}
++        . ${REACT_NATIVE_PATH}/sdks/hermes-engine/utils/build-hermesc-xcode.sh #{hermesc_path}
++        EOS
++      },
++      {
++        :name => '[RN] [2] Build Hermes',
++        :script => <<-EOS
++        . ${PODS_ROOT}/../.xcode.env
++        export CMAKE_BINARY=${CMAKE_BINARY:-#{CMAKE_BINARY}}
++        . ${REACT_NATIVE_PATH}/sdks/hermes-engine/utils/build-hermes-xcode.sh #{version} #{hermesc_path}/ImportHermesc.cmake
++        EOS
++      }
++    ]
++  end
++end
+diff --git a/node_modules/react-native/sdks/hermes/hermes-utils.rb b/node_modules/react-native/sdks/hermes/hermes-utils.rb
+new file mode 100644
+index 0000000..06f3644
+--- /dev/null
++++ b/node_modules/react-native/sdks/hermes/hermes-utils.rb
+@@ -0,0 +1,144 @@
++# Copyright (c) Meta Platforms, Inc. and affiliates.
++#
++# This source code is licensed under the MIT license found in the
++# LICENSE file in the root directory of this source tree.
++
++require 'net/http'
++require 'rexml/document'
++
++# This function abort the build if the `HERMES_ENGINE_TARBALL_PATH` ENV variable is set with an invalid path
++def abort_if_invalid_tarball_provided!()
++    if ENV.has_key?('HERMES_ENGINE_TARBALL_PATH') && !File.exist?(ENV['HERMES_ENGINE_TARBALL_PATH'])
++        abort "[Hermes] HERMES_ENGINE_TARBALL_PATH is set, but points to a non-existing file: \"#{ENV['HERMES_ENGINE_TARBALL_PATH']}\"\nIf you don't want to use tarball, run `unset HERMES_ENGINE_TARBALL_PATH`"
++    end
++end
++
++# It computes the right value for the hermes-engine.podspec's source.
++# - To use a specific tarball, install the dependencies with:
++# `HERMES_ENGINE_TARBALL_PATH=<path_to_tarball> bundle exec pod install`
++# - To force a build from source, install the dependencies with:
++# `BUILD_FROM_SOURCE=true bundle exec pod install`
++# If none of the two are provided, Cocoapods will check whether there is a tarball for the current version
++# (either release or nightly). If not, it will fall back building from source (the latest commit on main).
++#
++# Parameters:
++# - build_from_source: boolean to force a build from source.
++# - hermestag_file: path to the hermes tag file.
++# - git: uri to the hermes repository
++# - version: current version of the pod
++# - build_type: build type of the hermes engine. It can be `:release` or `:debug`
++# - react_native_path: path to react native
++#
++# Returns: a properly configured source object
++def compute_hermes_source(build_from_source, hermestag_file, git, version, build_type, react_native_path)
++    source = {}
++
++    if ENV.has_key?('HERMES_ENGINE_TARBALL_PATH')
++        use_tarball(source)
++    elsif build_from_source
++        if File.exist?(hermestag_file)
++            build_from_tagfile(source, git, hermestag_file)
++        else
++            build_hermes_from_source(source, git)
++        end
++    elsif hermes_artifact_exists(release_tarball_url(version, build_type))
++        use_release_tarball(source, version, build_type)
++    elsif hermes_artifact_exists(nightly_tarball_url(version).gsub("\\", ""))
++        use_nightly_tarball(source, react_native_path, version)
++    else
++        build_hermes_from_source(source, git)
++    end
++
++    return source
++end
++
++def use_tarball(source)
++    tarball_path = ENV['HERMES_ENGINE_TARBALL_PATH']
++    putsIfPodPresent("[Hermes] Using pre-built Hermes binaries from local path: #{tarball_path}")
++    source[:http] = "file://#{tarball_path}"
++end
++
++def build_from_tagfile(source, git, hermestag_file)
++    hermestag = File.read(hermestag_file).strip
++    putsIfPodPresent("[Hermes] Building Hermes from source from tag #{hermestag}...")
++    source[:git] = git
++    source[:tag] = hermestag
++end
++
++def use_release_tarball(source, version, build_type)
++    # Sample url from Maven:
++    # https://repo1.maven.org/maven2/com/facebook/react/react-native-artifacts/0.71.0/react-native-artifacts-0.71.0-hermes-ios-debug.tar.gz
++    putsIfPodPresent('[Hermes] Using the release tarball from Maven Central', 'info')
++    source[:http] = release_tarball_url(version, build_type)
++end
++
++def release_tarball_url(version, build_type)
++    return "https://repo1.maven.org/maven2/com/facebook/react/react-native-artifacts/#{version}/react-native-artifacts-#{version}-hermes-ios-#{build_type.to_s}.tar.gz"
++end
++
++def use_nightly_tarball(source, react_native_path, version)
++    putsIfPodPresent('[Hermes] Nightly version, download pre-built for Hermes')
++    destination_path = download_nightly_hermes(react_native_path, version)
++    # set tarball as hermes engine
++    source[:http] = "file://#{destination_path}"
++end
++
++def putsIfPodPresent(message, level = 'warning')
++    unless Object.const_defined?("Pod::UI")
++        return
++    end
++
++    case level
++    when 'info'
++        Pod::UI.puts message.green
++    when 'error'
++        Pod::UI.puts message.red
++    else
++        Pod::UI.puts message.yellow
++    end
++end
++
++# This function downloads the nightly prebuilt version of Hermes based on the passed version
++# and save it in the node_module/react_native/sdks/downloads folder
++# It then returns the path to the hermes tarball
++#
++# Parameters
++# - react_native_path: the path to the React Native folder in node modules. It is used as root path to store the Hermes tarball
++# - version: the version of React Native that requires the Hermes tarball
++# Returns: the path to the downloaded Hermes tarball
++def download_nightly_hermes(react_native_path, version)
++    tarball_url = nightly_tarball_url(version)
++
++    destination_folder = "#{react_native_path}/sdks/downloads"
++    destination_path = "#{destination_folder}/hermes-ios-#{version}.tar.gz"
++
++    unless File.exist?(destination_path)
++      # Download to a temporary file first so we don't cache incomplete downloads.
++      tmp_file = "#{destination_folder}/hermes-ios.download"
++      `mkdir -p "#{destination_folder}" && curl "#{tarball_url}" -Lo "#{tmp_file}" && mv "#{tmp_file}" "#{destination_path}"`
++    end
++    return destination_path
++end
++
++def nightly_tarball_url(version)
++    params = "r=snapshots\&g=com.facebook.react\&a=react-native-artifacts\&c=hermes-ios-debug\&e=tar.gz\&v=#{version}-SNAPSHOT"
++    return "http://oss.sonatype.org/service/local/artifact/maven/redirect\?#{params}"
++end
++
++def build_hermes_from_source(source, git)
++    putsIfPodPresent('[Hermes] Installing hermes-engine may take slightly longer, building Hermes compiler from source...')
++    source[:git] = git
++    source[:commit] = `git ls-remote https://github.com/facebook/hermes main | cut -f 1`.strip
++end
++
++# This function checks that Hermes artifact exists.
++# As of now it should check it on the Maven repo.
++#
++# Parameters
++# - version: the version of React Native
++# - build_type: debug or release
++def hermes_artifact_exists(tarball_url)
++    # -L is used to follow redirects, useful for the nightlies
++    # I also needed to wrap the url in quotes to avoid escaping & and ?.
++    return (`curl -o /dev/null --silent -Iw '%{http_code}' -L "#{tarball_url}"` == "200")
++end
+diff --git a/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec b/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec
+index 93ee49f..e4380ea 100644
+--- a/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec
++++ b/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec
+@@ -21,6 +21,6 @@ Pod::Spec.new do |spec|
+   spec.user_target_xcconfig = { "HEADER_SEARCH_PATHS" => "\"$(PODS_ROOT)/DoubleConversion\"" }
+ 
+   # Pinning to the same version as React.podspec.
+-  spec.platforms = { :ios => "12.4" }
++  spec.platforms = { :ios => "12.0" }
+ 
+ end
+diff --git a/node_modules/react-native/third-party-podspecs/boost.podspec b/node_modules/react-native/third-party-podspecs/boost.podspec
+index 3d9331c..b1e2c6a 100644
+--- a/node_modules/react-native/third-party-podspecs/boost.podspec
++++ b/node_modules/react-native/third-party-podspecs/boost.podspec
+@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
+   spec.homepage = 'http://www.boost.org'
+   spec.summary = 'Boost provides free peer-reviewed portable C++ source libraries.'
+   spec.authors = 'Rene Rivera'
+-  spec.source = { :http => 'https://boostorg.jfrog.io/artifactory/main/release/1.76.0/source/boost_1_76_0.tar.bz2',
++  spec.source = { :http => 'https://sourceforge.net/projects/boost/files/boost/1.76.0/boost_1_76_0.tar.bz2',
+                   :sha256 => 'f0397ba6e982c4450f27bf32a2a83292aba035b827a5623a14636ea583318c41' }
+ 
+   # Pinning to the same version as React.podspec.
+diff --git a/node_modules/react-native/third-party-podspecs/glog.podspec b/node_modules/react-native/third-party-podspecs/glog.podspec
+index 64213f9..d75b7b1 100644
+--- a/node_modules/react-native/third-party-podspecs/glog.podspec
++++ b/node_modules/react-native/third-party-podspecs/glog.podspec
+@@ -33,6 +33,6 @@ Pod::Spec.new do |spec|
+                                "HEADER_SEARCH_PATHS" => "$(PODS_TARGET_SRCROOT)/src" }
+ 
+   # Pinning to the same version as React.podspec.
+-  spec.platforms = { :ios => "12.4" }
++  spec.platforms = { :ios => "12.0" }
+ 
+ end
