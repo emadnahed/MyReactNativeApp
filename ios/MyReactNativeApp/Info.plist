@@ -36,7 +36,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -51,5 +51,74 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Albra-Black.otf</string>
+		<string>Albra-BlackItalic.otf</string>
+		<string>Albra-Bold.otf</string>
+		<string>Albra-BoldItalic.otf</string>
+		<string>Albra-Light.otf</string>
+		<string>Albra-LightItalic.otf</string>
+		<string>Albra-Medium.otf</string>
+		<string>Albra-MediumItalic.otf</string>
+		<string>Albra-Regular.otf</string>
+		<string>Albra-RegularItalic.otf</string>
+		<string>Albra-Semi.otf</string>
+		<string>Albra-SemiItalic.otf</string>
+		<string>Albra-Thin.otf</string>
+		<string>AlbraDisplay-Black.otf</string>
+		<string>AlbraDisplay-BlackItalic.otf</string>
+		<string>AlbraDisplay-Bold.otf</string>
+		<string>AlbraDisplay-BoldItalic.otf</string>
+		<string>AlbraDisplay-Light.otf</string>
+		<string>AlbraDisplay-LightItalic.otf</string>
+		<string>AlbraDisplay-Medium.otf</string>
+		<string>AlbraDisplay-MediumItalic.otf</string>
+		<string>AlbraDisplay-Regular.otf</string>
+		<string>AlbraDisplay-RegularItalic.otf</string>
+		<string>AlbraDisplay-Semi.otf</string>
+		<string>AlbraDisplay-SemiItalic.otf</string>
+		<string>AlbraGrotesk-Black.otf</string>
+		<string>AlbraGrotesk-BlackItalic.otf</string>
+		<string>AlbraGrotesk-Bold.otf</string>
+		<string>AlbraGrotesk-BoldItalic.otf</string>
+		<string>AlbraGrotesk-Light.otf</string>
+		<string>AlbraGrotesk-LightItalic.otf</string>
+		<string>AlbraGrotesk-Medium.otf</string>
+		<string>AlbraGrotesk-MediumItalic.otf</string>
+		<string>AlbraGrotesk-Regular.otf</string>
+		<string>AlbraGrotesk-RegularItalic.otf</string>
+		<string>AlbraGrotesk-Semi.otf</string>
+		<string>AlbraGrotesk-SemiItalic.otf</string>
+		<string>AlbraSans-Black.otf</string>
+		<string>AlbraSans-BlackItalic.otf</string>
+		<string>AlbraSans-Bold.otf</string>
+		<string>AlbraSans-BoldItalic.otf</string>
+		<string>AlbraSans-Light.otf</string>
+		<string>AlbraSans-LightItalic.otf</string>
+		<string>AlbraSans-Medium.otf</string>
+		<string>AlbraSans-MediumItalic.otf</string>
+		<string>AlbraSans-Regular.otf</string>
+		<string>AlbraSans-RegularItalic.otf</string>
+		<string>AlbraSans-Semi.otf</string>
+		<string>AlbraSans-SemiItalic.otf</string>
+		<string>AlbraText-Black.otf</string>
+		<string>AlbraText-BlackItalic.otf</string>
+		<string>AlbraText-Bold.otf</string>
+		<string>AlbraText-BoldItalic.otf</string>
+		<string>AlbraText-Light.otf</string>
+		<string>AlbraText-LightItalic.otf</string>
+		<string>AlbraText-Medium.otf</string>
+		<string>AlbraText-MediumItalic.otf</string>
+		<string>AlbraText-Regular.otf</string>
+		<string>AlbraText-RegularItalic.otf</string>
+		<string>AlbraText-Semi.otf</string>
+		<string>AlbraText-SemiItalic.otf</string>
+		<string>Gilroy-Bold.ttf</string>
+		<string>Gilroy-Heavy.ttf</string>
+		<string>Gilroy-Light.ttf</string>
+		<string>Gilroy-Medium.ttf</string>
+		<string>Gilroy-Regular.ttf</string>
+	</array>
 </dict>
 </plist>

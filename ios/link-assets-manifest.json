@@ -1,0 +1,269 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Albra/Albra-Black.otf",
+      "sha1": "28615945ffe52dd6905aba8c69e5f24459b64ddc"
+    },
+    {
+      "path": "assets/fonts/Albra/Albra-BlackItalic.otf",
+      "sha1": "f56f679f31e425fb6de7e985c6e53ad2b235246c"
+    },
+    {
+      "path": "assets/fonts/Albra/Albra-Bold.otf",
+      "sha1": "9e4f746fefda7214d80bf02de030db6ce9f98c85"
+    },
+    {
+      "path": "assets/fonts/Albra/Albra-BoldItalic.otf",
+      "sha1": "d2f634b9c456387d0c986c0e5cc3d4ed7b970f5b"
+    },
+    {
+      "path": "assets/fonts/Albra/Albra-Light.otf",
+      "sha1": "1f195e27cdfc50651c17b62f2517b427f74b141d"
+    },
+    {
+      "path": "assets/fonts/Albra/Albra-LightItalic.otf",
+      "sha1": "ad3a2a29c6538407b4673baadfa1b44f1089c4ef"
+    },
+    {
+      "path": "assets/fonts/Albra/Albra-Medium.otf",
+      "sha1": "5f99eabca16ab73bdf6a2160f9c01b9faffc7241"
+    },
+    {
+      "path": "assets/fonts/Albra/Albra-MediumItalic.otf",
+      "sha1": "cfab54f382e7f9e7d9761736a51121019e570e29"
+    },
+    {
+      "path": "assets/fonts/Albra/Albra-Regular.otf",
+      "sha1": "30695cab6668ac8eb0c5eb907b15922730612ec9"
+    },
+    {
+      "path": "assets/fonts/Albra/Albra-RegularItalic.otf",
+      "sha1": "5794874902a27472e26724f960dbe17ad64eb5b1"
+    },
+    {
+      "path": "assets/fonts/Albra/Albra-Semi.otf",
+      "sha1": "3dab9a401e495f14e1b7cb874d168d283788eecb"
+    },
+    {
+      "path": "assets/fonts/Albra/Albra-SemiItalic.otf",
+      "sha1": "e62b0c96ab88f83871dcec7b0a9d26ebe2459a2a"
+    },
+    {
+      "path": "assets/fonts/Albra/Albra-Thin.otf",
+      "sha1": "22e83b592acfc2b88d832509a96c434cb275d3e9"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraDisplay-Black.otf",
+      "sha1": "0e5687554d66d50d127d91e2dd05bd43aaa3262f"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraDisplay-BlackItalic.otf",
+      "sha1": "fc60659c1b7cb3d72b17750515dace316c206d4d"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraDisplay-Bold.otf",
+      "sha1": "3613fb3654880e6d9be1a46d54cb7359fcdfbbdd"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraDisplay-BoldItalic.otf",
+      "sha1": "0d070b380f145d4395951ab043c217b12e5668af"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraDisplay-Light.otf",
+      "sha1": "b76c59483a39005e6a457bdcb341425eb03b6786"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraDisplay-LightItalic.otf",
+      "sha1": "88c75aa4595f5fe2bf7ec4554155321ab33f16ac"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraDisplay-Medium.otf",
+      "sha1": "dea120daa95d75589ebc594e0e251b8350dc2aba"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraDisplay-MediumItalic.otf",
+      "sha1": "9ecfc66d9c7c3679eddf74f583bbfd3c4bfdc979"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraDisplay-Regular.otf",
+      "sha1": "ba7d8fbecee315803c79973f6c27765aec2b9c61"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraDisplay-RegularItalic.otf",
+      "sha1": "1abb866b5d846341c7c199312b532a9c81d10ec9"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraDisplay-Semi.otf",
+      "sha1": "d6b89abb06dfe1ff0a8525d2d19556e97475ed7b"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraDisplay-SemiItalic.otf",
+      "sha1": "308ae1d429315d4edda195f2d217f38743b4b1bf"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraGrotesk-Black.otf",
+      "sha1": "e22bd9ee92783fb8e13a1de6637798c640caaa12"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraGrotesk-BlackItalic.otf",
+      "sha1": "c8f4ec1a49f94fc44f15fc3ceb4bb4cce8353903"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraGrotesk-Bold.otf",
+      "sha1": "cc0a399d654da5a7de2375e577cf6345cbc840ac"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraGrotesk-BoldItalic.otf",
+      "sha1": "7aa13cb6a4da07e132032d9505c9e98614d834b8"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraGrotesk-Light.otf",
+      "sha1": "c97f4ab1bafc636b519e99b93945eb714989fb4d"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraGrotesk-LightItalic.otf",
+      "sha1": "6ae00efa0c711081ad8789c4aee9c30bc9f3c377"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraGrotesk-Medium.otf",
+      "sha1": "ef5cd77344bd3adb647d1a7a1ed73099a59e7fc3"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraGrotesk-MediumItalic.otf",
+      "sha1": "890165a3919e2dd79d32dcda19c54699047b1fca"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraGrotesk-Regular.otf",
+      "sha1": "de7758886b0b91c7e99fe8cd556be1250805f7b3"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraGrotesk-RegularItalic.otf",
+      "sha1": "ee28a836ef137abefa6920177a37465158597f2f"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraGrotesk-Semi.otf",
+      "sha1": "88a8830c566b9b03d035eb18749ca1746bbe07d2"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraGrotesk-SemiItalic.otf",
+      "sha1": "e1325525c68266523786a672dc7e8dd2aa3db3dd"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraSans-Black.otf",
+      "sha1": "0311f3a92809344208b15774178ac70497521606"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraSans-BlackItalic.otf",
+      "sha1": "eec182c8ca5692accdd0a29609f3bee08ec6a868"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraSans-Bold.otf",
+      "sha1": "d80ec0df3a039c26f585f2ed905dd183a44d245b"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraSans-BoldItalic.otf",
+      "sha1": "3796d3facb206edbb4b60957ee103f82ed615a88"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraSans-Light.otf",
+      "sha1": "c11f4128b63fb831ccd0859348a11d4cd2176db2"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraSans-LightItalic.otf",
+      "sha1": "f98c0b43866053aedd62e451cfa8428d3d67b665"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraSans-Medium.otf",
+      "sha1": "7acce6ed28b056b476f4507ff1cecb094f5ce861"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraSans-MediumItalic.otf",
+      "sha1": "8c40db29b6a0774bf953e8f0243b2636bb286333"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraSans-Regular.otf",
+      "sha1": "7aa082c21c4daf37046973f40e88a6c211570653"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraSans-RegularItalic.otf",
+      "sha1": "f81bfd6343f056d30176ae513c024e5226629d18"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraSans-Semi.otf",
+      "sha1": "f248fe6da2bd047171ad7f011bb4e5c5f40ce8f0"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraSans-SemiItalic.otf",
+      "sha1": "3919b221be1b2744ca90147861823b401fc4ca62"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraText-Black.otf",
+      "sha1": "3756e54e5d3804b8c1a3dd041d4c2411e6abaefe"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraText-BlackItalic.otf",
+      "sha1": "f7fe30f8b3f12d1b152b539f03bcdff32a84c03e"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraText-Bold.otf",
+      "sha1": "b1f1a91e79526d7ba78a2bfaab8ddaf6bf28f663"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraText-BoldItalic.otf",
+      "sha1": "74fcb083b1703d5503bab2faa2ee206dcd048de2"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraText-Light.otf",
+      "sha1": "26475b2b06954d544d04c3f13e1b11a22bbe7bc5"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraText-LightItalic.otf",
+      "sha1": "54ce7cd14c2885cf3f806688411f2b991a1787b9"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraText-Medium.otf",
+      "sha1": "bd366be6499901580e5913f4771e3a1c62f503d5"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraText-MediumItalic.otf",
+      "sha1": "42da3bb46ab3c69b3e7298b9d46e6d8c43ac2f85"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraText-Regular.otf",
+      "sha1": "db161b6874ed20a82a22fa746dc655aa8e2dff58"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraText-RegularItalic.otf",
+      "sha1": "7fd1c429fec906a7cf49a6241376845a93088005"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraText-Semi.otf",
+      "sha1": "e2242cead4c8046cb413cc3f08e1b0e02f2ab92b"
+    },
+    {
+      "path": "assets/fonts/Albra/AlbraText-SemiItalic.otf",
+      "sha1": "0686dac7754236294aea939d929ca20bfc318064"
+    },
+    {
+      "path": "assets/fonts/Gilroy/Gilroy-Bold.ttf",
+      "sha1": "eeda33cebb0c6cb6cdbf2af87ef0cebfcb9e9f99"
+    },
+    {
+      "path": "assets/fonts/Gilroy/Gilroy-Heavy.ttf",
+      "sha1": "6a2631b0af0b75a60e8d887d867f95578bb6e1f6"
+    },
+    {
+      "path": "assets/fonts/Gilroy/Gilroy-Light.ttf",
+      "sha1": "3a3bc2fff8192fb3d99827c17eb37a6eb0f8d821"
+    },
+    {
+      "path": "assets/fonts/Gilroy/Gilroy-Medium.ttf",
+      "sha1": "a05d394f3550b31324c7ef6eda6bd09a6bcfb4bd"
+    },
+    {
+      "path": "assets/fonts/Gilroy/Gilroy-Regular.ttf",
+      "sha1": "eae0f6aa553643ae5c2b4da46a422f8d26255bb1"
+    }
+  ]
+}

@@ -327,7 +327,7 @@ PODS:
   - React-jsinspector (0.72.6)
   - React-logger (0.72.6):
     - glog
-  - react-native-safe-area-context (5.6.1):
+  - react-native-safe-area-context (4.8.2):
     - React-Core
   - React-NativeModulesApple (0.72.6):
     - hermes-engine
@@ -622,7 +622,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: f7a0e183e2b493928997c647a4fd744d5fc38752
   React-jsinspector: 5f6889c5f4e6cff6b96d1007bd2303c98da85f48
   React-logger: 11ce1954b3f6c09df63ec65c5011e7f8758007c3
-  react-native-safe-area-context: 547a82d22b07d8537997395b85d3acd8e69963ee
+  react-native-safe-area-context: cbd46b42a2751124c64c14956f1bfd6b6bc23445
   React-NativeModulesApple: b4c903e4ccbdeb3de9fa9555a308e97921ec5e62
   React-perflogger: b1b482099c7b7cf23285871f0f8f51e0844b7b5f
   React-RCTActionSheet: 6900fda7312a3c808f884348e80965529b76d7b0
@@ -640,7 +640,7 @@ SPEC CHECKSUMS:
   React-runtimescheduler: 5b5f91b1940887ee4d5a39669ab1dd3135e31d12
   React-utils: cc56122dabddebc9d83e19d9dcda4f74b60e0ce9
   ReactCommon: c91dd880ccd893e96c01357c99a04eb6368e0f20
-  RNFastImage: 624aacd7f03d4e1e5b5f8dd76add8b97930f0a6c
+  RNFastImage: 462a183c4b0b6b26fdfd639e1ed6ba37536c3b87
   RNScreens: a425ae50ad66d024a6e936121bf5c9fbe6a5cdc6
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SDWebImageWebPCoder: 908b83b6adda48effe7667cd2b7f78c897e5111d

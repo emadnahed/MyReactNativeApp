@@ -8,12 +8,78 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* MyReactNativeAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MyReactNativeAppTests.m */; };
+		042DC52BCA3542D7BABD8659 /* Albra-Semi.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7384D32FE5894436B8CC66DC /* Albra-Semi.otf */; };
+		0456C00DE6204038A9595C99 /* AlbraGrotesk-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE46095E24F443E7BCA2C056 /* AlbraGrotesk-Black.otf */; };
+		0D452017571C4C6C89056651 /* AlbraText-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BADD22BB7D4A43DCAAFAA8E4 /* AlbraText-BlackItalic.otf */; };
+		10DC7C32DAD74C729F93E10B /* AlbraGrotesk-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9E2A8FBC18947D8882090B6 /* AlbraGrotesk-BoldItalic.otf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		181D697E022C4D8EAA91B62C /* AlbraSans-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F3EB63E34B2D4859AD5FE09E /* AlbraSans-RegularItalic.otf */; };
+		18CA72B92C314FAC80F40AA4 /* AlbraDisplay-SemiItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 09A24E054E6940F6ADB25CC1 /* AlbraDisplay-SemiItalic.otf */; };
+		1E80758A9F864637BE6F2F5B /* AlbraDisplay-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF3AAA3DD36D4C6CA35E851B /* AlbraDisplay-MediumItalic.otf */; };
+		1FCD1820E390443B92760B51 /* AlbraDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7F09AF21E2B4CE3950AE165 /* AlbraDisplay-Bold.otf */; };
 		31C4BCF92F8DF95B716F3069 /* libPods-MyReactNativeApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B3C5EB2D2A85EEDCAAC196 /* libPods-MyReactNativeApp.a */; };
+		33AD372DE2644EB5A332FE63 /* AlbraSans-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F5A8238E8F9B4E43BF5FAC5B /* AlbraSans-BoldItalic.otf */; };
+		349D7E870829440AA9317486 /* Albra-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E380846B3FB4C6DAA1A713B /* Albra-Regular.otf */; };
+		34C18FE0D4534454BEDAF2CF /* AlbraGrotesk-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 141E8D747D4A4FB989C247CD /* AlbraGrotesk-LightItalic.otf */; };
+		37F569C1BE9447A8803B4027 /* AlbraGrotesk-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E14FC7C86470DB9B5241E /* AlbraGrotesk-Regular.otf */; };
+		3836F3BB1069492B98B5919A /* AlbraDisplay-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A4656C0A289E4BD2A9D087FC /* AlbraDisplay-Light.otf */; };
+		386B421E7C9E416985B8DDD0 /* AlbraText-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4BF4C839AA73480A861C8974 /* AlbraText-Black.otf */; };
+		3B5AD8970E5D42A89AD8E53E /* Albra-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5FA6CE3D912E444DB2768351 /* Albra-RegularItalic.otf */; };
+		3CD754D6FDF044EBB71A1649 /* AlbraSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F8277BA7923494B8A9B1206 /* AlbraSans-Bold.otf */; };
+		3DA1CE55DED94811AA3B39DD /* AlbraText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6569A6B228E649B4B46F9251 /* AlbraText-Bold.otf */; };
+		43B9CA56C0C14C0FA0316C1A /* Albra-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 06E330EC34334A95911F94D6 /* Albra-LightItalic.otf */; };
+		46F44E7DD3164481B7B84FFE /* AlbraGrotesk-Semi.otf in Resources */ = {isa = PBXBuildFile; fileRef = F31C6F3BC2DD41D8A4490871 /* AlbraGrotesk-Semi.otf */; };
+		4E9D85383D8E4F0FA90D08E0 /* AlbraGrotesk-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B0D0F46DD6434481A9BFD1DD /* AlbraGrotesk-MediumItalic.otf */; };
+		510B7D4F84F545CD822B99F4 /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1A2C281169A47AEAAE67749 /* Gilroy-Regular.ttf */; };
+		53B3B35DCEEB491F9B4F0082 /* AlbraGrotesk-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D5C1E03670BC42ACA9AC59A3 /* AlbraGrotesk-RegularItalic.otf */; };
+		63D328BD918F4BE7968240D1 /* AlbraGrotesk-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 139E70E966C242B9A7190FBB /* AlbraGrotesk-BlackItalic.otf */; };
+		63FC14F78AA741138289354D /* AlbraText-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9A9D9EF38EDF415486977563 /* AlbraText-LightItalic.otf */; };
+		67712C8C20914C7EA7638FFE /* AlbraDisplay-Semi.otf in Resources */ = {isa = PBXBuildFile; fileRef = D006F2902E12485B89FB55E1 /* AlbraDisplay-Semi.otf */; };
+		68C67979CF734C4B8E4D47A5 /* AlbraDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9F596D304424160A5CA37FB /* AlbraDisplay-Regular.otf */; };
+		6C5DACC62C414A369053B479 /* AlbraSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CD06C24E41A4F6394F3A363 /* AlbraSans-Medium.otf */; };
+		73574B36C7784A59B5634E51 /* Albra-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4A8B3AD6E310435786F8A1C3 /* Albra-Bold.otf */; };
+		78EB73EE6F054AA2B1FCB8ED /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB709D3C135C4131BB469106 /* Gilroy-Bold.ttf */; };
+		7E3788457DC4419B80DCB4C1 /* AlbraSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E86117FFA466453CA3DB7BDC /* AlbraSans-Light.otf */; };
 		8066220AB29E2E8D749FCDF4 /* libPods-MyReactNativeApp-MyReactNativeAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BBADC6C59604676750F498 /* libPods-MyReactNativeApp-MyReactNativeAppTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		824D6CE18CFA428191931F72 /* AlbraSans-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = ED5E1B1F694F475DB42562E5 /* AlbraSans-MediumItalic.otf */; };
+		8449013F7B9C41FA803FCDCC /* AlbraDisplay-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3FCE5BE456064487816455C9 /* AlbraDisplay-Black.otf */; };
+		862A0167764A4981AA91516B /* Albra-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5B2EB4520C1F4576B386C7A4 /* Albra-BlackItalic.otf */; };
+		89F21636ADE54F829BFCD80A /* AlbraDisplay-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 58B388468FA6464799F202D1 /* AlbraDisplay-BoldItalic.otf */; };
+		8F8C490755164DAC9D3990FD /* AlbraGrotesk-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AED5E3C2C20746F6B5EA3E53 /* AlbraGrotesk-Bold.otf */; };
+		902D1908E9CC477AAB51C153 /* AlbraText-Semi.otf in Resources */ = {isa = PBXBuildFile; fileRef = 151E5985180D4092A3A00758 /* AlbraText-Semi.otf */; };
+		907789A367A84BFDA45040AC /* Albra-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83551CF804AD4654B5408A0D /* Albra-MediumItalic.otf */; };
+		93DB901B1A05417E8C044BD9 /* AlbraText-SemiItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 657476193F2C4B3E9428B57F /* AlbraText-SemiItalic.otf */; };
+		94DCABF5A5574F79BED35859 /* AlbraDisplay-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 60BDCCC1A4064A6A87AD3258 /* AlbraDisplay-RegularItalic.otf */; };
+		985BFF7A23C44AD78E61CDFB /* AlbraGrotesk-SemiItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7804666DAAAA41C5B0A8E48F /* AlbraGrotesk-SemiItalic.otf */; };
+		A10B0C84DAD4488F83819B2F /* AlbraSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C7FA7CE7A98E422EBF4527E0 /* AlbraSans-Regular.otf */; };
+		A2F353433EEA435396CE87E7 /* AlbraSans-SemiItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 57750B50FE314393B6880C87 /* AlbraSans-SemiItalic.otf */; };
+		A60E15DFF56B42778CA02325 /* AlbraText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A90EEB758DD44DF9A68B07E3 /* AlbraText-Light.otf */; };
+		A8A706D992854CD492D53F94 /* AlbraSans-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62D71F9FF932483EB7639E3A /* AlbraSans-LightItalic.otf */; };
+		AC1A6251BDBE4D8DAB80D1BE /* Albra-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62926BA85B7B4E6486432501 /* Albra-BoldItalic.otf */; };
+		B61E9CAEC18445BCA62EF9FC /* Albra-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E4641D371473469C937AB3B5 /* Albra-Light.otf */; };
+		B783AFA4B92A4A26974DA88D /* AlbraDisplay-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E44662C35146434C9C5C2099 /* AlbraDisplay-BlackItalic.otf */; };
+		BA4B7DD4A6814358993ABDB6 /* Albra-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A5C7A39D888E460E8AE323E0 /* Albra-Medium.otf */; };
+		BE4EDE6BFAA94F82962B33D7 /* Albra-SemiItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F80A1CF2D9D5429496BE4BE6 /* Albra-SemiItalic.otf */; };
+		BF4724795CB044A8B322CEEA /* AlbraText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB98870835D5489CBCD928F8 /* AlbraText-Medium.otf */; };
+		C0F1CF204E454F3AA53EA219 /* Gilroy-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1AF0F99FE25146EDA97EBC96 /* Gilroy-Heavy.ttf */; };
+		C3D4CB904F0A436E979B44B7 /* AlbraSans-Semi.otf in Resources */ = {isa = PBXBuildFile; fileRef = DA6AB188BF614F708A5A0C71 /* AlbraSans-Semi.otf */; };
+		CA59C2D19A154F4A8C890A10 /* AlbraText-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 93828FDD205B4CA6A0B163C0 /* AlbraText-BoldItalic.otf */; };
+		CABCC8C397AB4CC48C1BB5D2 /* AlbraSans-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = F7B139194E4D4635A0974D4B /* AlbraSans-BlackItalic.otf */; };
+		CBD757109B7445C7934AF1C7 /* AlbraSans-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA67F40AC254FFB84BCA8C6 /* AlbraSans-Black.otf */; };
+		CF6B9C4FA7C247ED9D749B1D /* AlbraGrotesk-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A4B85DC4AD4348D9AAC0C7BB /* AlbraGrotesk-Light.otf */; };
+		D4BBB147BB9246D59556314B /* AlbraDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F50D3CAEBDE84A9CBD7DF18B /* AlbraDisplay-Medium.otf */; };
+		E0A2AB64E4294478934F94A1 /* Albra-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6EF21AAADCE74501BD25B793 /* Albra-Thin.otf */; };
+		F0FE1C16CE134CC69E9BC7CB /* AlbraText-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE1B16BEECE4EE29EED30DC /* AlbraText-RegularItalic.otf */; };
+		F19E260BD57E42E3B8D36DC5 /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A991DFDF0ED74053A9519DC0 /* Gilroy-Medium.ttf */; };
+		F334746968534946830EF1DC /* AlbraText-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68C37986DCC64292AB24F193 /* AlbraText-MediumItalic.otf */; };
+		F527E8C99B53432882A12382 /* AlbraGrotesk-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB12F78792804967A17F128F /* AlbraGrotesk-Medium.otf */; };
+		F577B3DDE95B44BC8CDC2E3C /* Gilroy-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8463C8D76E64B318EB91684 /* Gilroy-Light.ttf */; };
+		F6C3653029804E2584F83E3C /* AlbraDisplay-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1E523906A94048F8B5088079 /* AlbraDisplay-LightItalic.otf */; };
+		FB4147C5D0684FE9900920BC /* Albra-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC9F4FD4A2E546F7AD07846A /* Albra-Black.otf */; };
+		FEF6A422EE5440C5894C0161 /* AlbraText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1461DBAEB04C4517BB1B700B /* AlbraText-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,19 +97,85 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* MyReactNativeAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyReactNativeAppTests.m; sourceTree = "<group>"; };
 		04BBADC6C59604676750F498 /* libPods-MyReactNativeApp-MyReactNativeAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyReactNativeApp-MyReactNativeAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06E330EC34334A95911F94D6 /* Albra-LightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Albra-LightItalic.otf"; path = "../assets/fonts/Albra/Albra-LightItalic.otf"; sourceTree = "<group>"; };
+		09A24E054E6940F6ADB25CC1 /* AlbraDisplay-SemiItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraDisplay-SemiItalic.otf"; path = "../assets/fonts/Albra/AlbraDisplay-SemiItalic.otf"; sourceTree = "<group>"; };
+		139E70E966C242B9A7190FBB /* AlbraGrotesk-BlackItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraGrotesk-BlackItalic.otf"; path = "../assets/fonts/Albra/AlbraGrotesk-BlackItalic.otf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* MyReactNativeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyReactNativeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MyReactNativeApp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = MyReactNativeApp/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MyReactNativeApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MyReactNativeApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MyReactNativeApp/main.m; sourceTree = "<group>"; };
+		141E8D747D4A4FB989C247CD /* AlbraGrotesk-LightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraGrotesk-LightItalic.otf"; path = "../assets/fonts/Albra/AlbraGrotesk-LightItalic.otf"; sourceTree = "<group>"; };
+		1461DBAEB04C4517BB1B700B /* AlbraText-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraText-Regular.otf"; path = "../assets/fonts/Albra/AlbraText-Regular.otf"; sourceTree = "<group>"; };
+		151E5985180D4092A3A00758 /* AlbraText-Semi.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraText-Semi.otf"; path = "../assets/fonts/Albra/AlbraText-Semi.otf"; sourceTree = "<group>"; };
+		1AF0F99FE25146EDA97EBC96 /* Gilroy-Heavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-Heavy.ttf"; path = "../assets/fonts/Gilroy/Gilroy-Heavy.ttf"; sourceTree = "<group>"; };
+		1E523906A94048F8B5088079 /* AlbraDisplay-LightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraDisplay-LightItalic.otf"; path = "../assets/fonts/Albra/AlbraDisplay-LightItalic.otf"; sourceTree = "<group>"; };
 		29E45A1A086D12255E13C412 /* Pods-MyReactNativeApp-MyReactNativeAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyReactNativeApp-MyReactNativeAppTests.release.xcconfig"; path = "Target Support Files/Pods-MyReactNativeApp-MyReactNativeAppTests/Pods-MyReactNativeApp-MyReactNativeAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		3F8D14BF40A55298E2F32715 /* Pods-MyReactNativeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyReactNativeApp.debug.xcconfig"; path = "Target Support Files/Pods-MyReactNativeApp/Pods-MyReactNativeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		3FCE5BE456064487816455C9 /* AlbraDisplay-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraDisplay-Black.otf"; path = "../assets/fonts/Albra/AlbraDisplay-Black.otf"; sourceTree = "<group>"; };
+		4A8B3AD6E310435786F8A1C3 /* Albra-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Albra-Bold.otf"; path = "../assets/fonts/Albra/Albra-Bold.otf"; sourceTree = "<group>"; };
+		4BF4C839AA73480A861C8974 /* AlbraText-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraText-Black.otf"; path = "../assets/fonts/Albra/AlbraText-Black.otf"; sourceTree = "<group>"; };
+		4CD06C24E41A4F6394F3A363 /* AlbraSans-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraSans-Medium.otf"; path = "../assets/fonts/Albra/AlbraSans-Medium.otf"; sourceTree = "<group>"; };
+		4F8277BA7923494B8A9B1206 /* AlbraSans-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraSans-Bold.otf"; path = "../assets/fonts/Albra/AlbraSans-Bold.otf"; sourceTree = "<group>"; };
+		57750B50FE314393B6880C87 /* AlbraSans-SemiItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraSans-SemiItalic.otf"; path = "../assets/fonts/Albra/AlbraSans-SemiItalic.otf"; sourceTree = "<group>"; };
+		58B388468FA6464799F202D1 /* AlbraDisplay-BoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraDisplay-BoldItalic.otf"; path = "../assets/fonts/Albra/AlbraDisplay-BoldItalic.otf"; sourceTree = "<group>"; };
+		5B2EB4520C1F4576B386C7A4 /* Albra-BlackItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Albra-BlackItalic.otf"; path = "../assets/fonts/Albra/Albra-BlackItalic.otf"; sourceTree = "<group>"; };
+		5FA6CE3D912E444DB2768351 /* Albra-RegularItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Albra-RegularItalic.otf"; path = "../assets/fonts/Albra/Albra-RegularItalic.otf"; sourceTree = "<group>"; };
+		60BDCCC1A4064A6A87AD3258 /* AlbraDisplay-RegularItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraDisplay-RegularItalic.otf"; path = "../assets/fonts/Albra/AlbraDisplay-RegularItalic.otf"; sourceTree = "<group>"; };
+		62926BA85B7B4E6486432501 /* Albra-BoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Albra-BoldItalic.otf"; path = "../assets/fonts/Albra/Albra-BoldItalic.otf"; sourceTree = "<group>"; };
+		62D71F9FF932483EB7639E3A /* AlbraSans-LightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraSans-LightItalic.otf"; path = "../assets/fonts/Albra/AlbraSans-LightItalic.otf"; sourceTree = "<group>"; };
+		6569A6B228E649B4B46F9251 /* AlbraText-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraText-Bold.otf"; path = "../assets/fonts/Albra/AlbraText-Bold.otf"; sourceTree = "<group>"; };
+		657476193F2C4B3E9428B57F /* AlbraText-SemiItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraText-SemiItalic.otf"; path = "../assets/fonts/Albra/AlbraText-SemiItalic.otf"; sourceTree = "<group>"; };
+		68C37986DCC64292AB24F193 /* AlbraText-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraText-MediumItalic.otf"; path = "../assets/fonts/Albra/AlbraText-MediumItalic.otf"; sourceTree = "<group>"; };
+		6EF21AAADCE74501BD25B793 /* Albra-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Albra-Thin.otf"; path = "../assets/fonts/Albra/Albra-Thin.otf"; sourceTree = "<group>"; };
+		7384D32FE5894436B8CC66DC /* Albra-Semi.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Albra-Semi.otf"; path = "../assets/fonts/Albra/Albra-Semi.otf"; sourceTree = "<group>"; };
+		7804666DAAAA41C5B0A8E48F /* AlbraGrotesk-SemiItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraGrotesk-SemiItalic.otf"; path = "../assets/fonts/Albra/AlbraGrotesk-SemiItalic.otf"; sourceTree = "<group>"; };
+		7E6E14FC7C86470DB9B5241E /* AlbraGrotesk-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraGrotesk-Regular.otf"; path = "../assets/fonts/Albra/AlbraGrotesk-Regular.otf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MyReactNativeApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		83551CF804AD4654B5408A0D /* Albra-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Albra-MediumItalic.otf"; path = "../assets/fonts/Albra/Albra-MediumItalic.otf"; sourceTree = "<group>"; };
+		8AA67F40AC254FFB84BCA8C6 /* AlbraSans-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraSans-Black.otf"; path = "../assets/fonts/Albra/AlbraSans-Black.otf"; sourceTree = "<group>"; };
+		8E380846B3FB4C6DAA1A713B /* Albra-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Albra-Regular.otf"; path = "../assets/fonts/Albra/Albra-Regular.otf"; sourceTree = "<group>"; };
+		93828FDD205B4CA6A0B163C0 /* AlbraText-BoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraText-BoldItalic.otf"; path = "../assets/fonts/Albra/AlbraText-BoldItalic.otf"; sourceTree = "<group>"; };
+		9A9D9EF38EDF415486977563 /* AlbraText-LightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraText-LightItalic.otf"; path = "../assets/fonts/Albra/AlbraText-LightItalic.otf"; sourceTree = "<group>"; };
+		A4656C0A289E4BD2A9D087FC /* AlbraDisplay-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraDisplay-Light.otf"; path = "../assets/fonts/Albra/AlbraDisplay-Light.otf"; sourceTree = "<group>"; };
+		A4B85DC4AD4348D9AAC0C7BB /* AlbraGrotesk-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraGrotesk-Light.otf"; path = "../assets/fonts/Albra/AlbraGrotesk-Light.otf"; sourceTree = "<group>"; };
+		A5C7A39D888E460E8AE323E0 /* Albra-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Albra-Medium.otf"; path = "../assets/fonts/Albra/Albra-Medium.otf"; sourceTree = "<group>"; };
+		A90EEB758DD44DF9A68B07E3 /* AlbraText-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraText-Light.otf"; path = "../assets/fonts/Albra/AlbraText-Light.otf"; sourceTree = "<group>"; };
+		A991DFDF0ED74053A9519DC0 /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-Medium.ttf"; path = "../assets/fonts/Gilroy/Gilroy-Medium.ttf"; sourceTree = "<group>"; };
+		AED5E3C2C20746F6B5EA3E53 /* AlbraGrotesk-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraGrotesk-Bold.otf"; path = "../assets/fonts/Albra/AlbraGrotesk-Bold.otf"; sourceTree = "<group>"; };
+		B0D0F46DD6434481A9BFD1DD /* AlbraGrotesk-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraGrotesk-MediumItalic.otf"; path = "../assets/fonts/Albra/AlbraGrotesk-MediumItalic.otf"; sourceTree = "<group>"; };
+		BADD22BB7D4A43DCAAFAA8E4 /* AlbraText-BlackItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraText-BlackItalic.otf"; path = "../assets/fonts/Albra/AlbraText-BlackItalic.otf"; sourceTree = "<group>"; };
+		BB98870835D5489CBCD928F8 /* AlbraText-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraText-Medium.otf"; path = "../assets/fonts/Albra/AlbraText-Medium.otf"; sourceTree = "<group>"; };
+		BBE1B16BEECE4EE29EED30DC /* AlbraText-RegularItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraText-RegularItalic.otf"; path = "../assets/fonts/Albra/AlbraText-RegularItalic.otf"; sourceTree = "<group>"; };
+		BF3AAA3DD36D4C6CA35E851B /* AlbraDisplay-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraDisplay-MediumItalic.otf"; path = "../assets/fonts/Albra/AlbraDisplay-MediumItalic.otf"; sourceTree = "<group>"; };
 		C0B3C5EB2D2A85EEDCAAC196 /* libPods-MyReactNativeApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyReactNativeApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17DDA142C9E4DF8EC80889E /* Pods-MyReactNativeApp-MyReactNativeAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyReactNativeApp-MyReactNativeAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MyReactNativeApp-MyReactNativeAppTests/Pods-MyReactNativeApp-MyReactNativeAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C7FA7CE7A98E422EBF4527E0 /* AlbraSans-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraSans-Regular.otf"; path = "../assets/fonts/Albra/AlbraSans-Regular.otf"; sourceTree = "<group>"; };
+		CB12F78792804967A17F128F /* AlbraGrotesk-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraGrotesk-Medium.otf"; path = "../assets/fonts/Albra/AlbraGrotesk-Medium.otf"; sourceTree = "<group>"; };
+		D006F2902E12485B89FB55E1 /* AlbraDisplay-Semi.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraDisplay-Semi.otf"; path = "../assets/fonts/Albra/AlbraDisplay-Semi.otf"; sourceTree = "<group>"; };
 		D2C60119207290B480CE02F5 /* Pods-MyReactNativeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyReactNativeApp.release.xcconfig"; path = "Target Support Files/Pods-MyReactNativeApp/Pods-MyReactNativeApp.release.xcconfig"; sourceTree = "<group>"; };
+		D5C1E03670BC42ACA9AC59A3 /* AlbraGrotesk-RegularItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraGrotesk-RegularItalic.otf"; path = "../assets/fonts/Albra/AlbraGrotesk-RegularItalic.otf"; sourceTree = "<group>"; };
+		D7F09AF21E2B4CE3950AE165 /* AlbraDisplay-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraDisplay-Bold.otf"; path = "../assets/fonts/Albra/AlbraDisplay-Bold.otf"; sourceTree = "<group>"; };
+		DA6AB188BF614F708A5A0C71 /* AlbraSans-Semi.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraSans-Semi.otf"; path = "../assets/fonts/Albra/AlbraSans-Semi.otf"; sourceTree = "<group>"; };
+		DC9F4FD4A2E546F7AD07846A /* Albra-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Albra-Black.otf"; path = "../assets/fonts/Albra/Albra-Black.otf"; sourceTree = "<group>"; };
+		DE46095E24F443E7BCA2C056 /* AlbraGrotesk-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraGrotesk-Black.otf"; path = "../assets/fonts/Albra/AlbraGrotesk-Black.otf"; sourceTree = "<group>"; };
+		E1A2C281169A47AEAAE67749 /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-Regular.ttf"; path = "../assets/fonts/Gilroy/Gilroy-Regular.ttf"; sourceTree = "<group>"; };
+		E44662C35146434C9C5C2099 /* AlbraDisplay-BlackItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraDisplay-BlackItalic.otf"; path = "../assets/fonts/Albra/AlbraDisplay-BlackItalic.otf"; sourceTree = "<group>"; };
+		E4641D371473469C937AB3B5 /* Albra-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Albra-Light.otf"; path = "../assets/fonts/Albra/Albra-Light.otf"; sourceTree = "<group>"; };
+		E8463C8D76E64B318EB91684 /* Gilroy-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-Light.ttf"; path = "../assets/fonts/Gilroy/Gilroy-Light.ttf"; sourceTree = "<group>"; };
+		E86117FFA466453CA3DB7BDC /* AlbraSans-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraSans-Light.otf"; path = "../assets/fonts/Albra/AlbraSans-Light.otf"; sourceTree = "<group>"; };
+		E9E2A8FBC18947D8882090B6 /* AlbraGrotesk-BoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraGrotesk-BoldItalic.otf"; path = "../assets/fonts/Albra/AlbraGrotesk-BoldItalic.otf"; sourceTree = "<group>"; };
+		E9F596D304424160A5CA37FB /* AlbraDisplay-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraDisplay-Regular.otf"; path = "../assets/fonts/Albra/AlbraDisplay-Regular.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		ED5E1B1F694F475DB42562E5 /* AlbraSans-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraSans-MediumItalic.otf"; path = "../assets/fonts/Albra/AlbraSans-MediumItalic.otf"; sourceTree = "<group>"; };
+		F31C6F3BC2DD41D8A4490871 /* AlbraGrotesk-Semi.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraGrotesk-Semi.otf"; path = "../assets/fonts/Albra/AlbraGrotesk-Semi.otf"; sourceTree = "<group>"; };
+		F3EB63E34B2D4859AD5FE09E /* AlbraSans-RegularItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraSans-RegularItalic.otf"; path = "../assets/fonts/Albra/AlbraSans-RegularItalic.otf"; sourceTree = "<group>"; };
+		F50D3CAEBDE84A9CBD7DF18B /* AlbraDisplay-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraDisplay-Medium.otf"; path = "../assets/fonts/Albra/AlbraDisplay-Medium.otf"; sourceTree = "<group>"; };
+		F5A8238E8F9B4E43BF5FAC5B /* AlbraSans-BoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraSans-BoldItalic.otf"; path = "../assets/fonts/Albra/AlbraSans-BoldItalic.otf"; sourceTree = "<group>"; };
+		F7B139194E4D4635A0974D4B /* AlbraSans-BlackItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "AlbraSans-BlackItalic.otf"; path = "../assets/fonts/Albra/AlbraSans-BlackItalic.otf"; sourceTree = "<group>"; };
+		F80A1CF2D9D5429496BE4BE6 /* Albra-SemiItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Albra-SemiItalic.otf"; path = "../assets/fonts/Albra/Albra-SemiItalic.otf"; sourceTree = "<group>"; };
+		FB709D3C135C4131BB469106 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Gilroy-Bold.ttf"; path = "../assets/fonts/Gilroy/Gilroy-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +238,80 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5F1367386DD64FEE962D6EF0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DC9F4FD4A2E546F7AD07846A /* Albra-Black.otf */,
+				5B2EB4520C1F4576B386C7A4 /* Albra-BlackItalic.otf */,
+				4A8B3AD6E310435786F8A1C3 /* Albra-Bold.otf */,
+				62926BA85B7B4E6486432501 /* Albra-BoldItalic.otf */,
+				E4641D371473469C937AB3B5 /* Albra-Light.otf */,
+				06E330EC34334A95911F94D6 /* Albra-LightItalic.otf */,
+				A5C7A39D888E460E8AE323E0 /* Albra-Medium.otf */,
+				83551CF804AD4654B5408A0D /* Albra-MediumItalic.otf */,
+				8E380846B3FB4C6DAA1A713B /* Albra-Regular.otf */,
+				5FA6CE3D912E444DB2768351 /* Albra-RegularItalic.otf */,
+				7384D32FE5894436B8CC66DC /* Albra-Semi.otf */,
+				F80A1CF2D9D5429496BE4BE6 /* Albra-SemiItalic.otf */,
+				6EF21AAADCE74501BD25B793 /* Albra-Thin.otf */,
+				3FCE5BE456064487816455C9 /* AlbraDisplay-Black.otf */,
+				E44662C35146434C9C5C2099 /* AlbraDisplay-BlackItalic.otf */,
+				D7F09AF21E2B4CE3950AE165 /* AlbraDisplay-Bold.otf */,
+				58B388468FA6464799F202D1 /* AlbraDisplay-BoldItalic.otf */,
+				A4656C0A289E4BD2A9D087FC /* AlbraDisplay-Light.otf */,
+				1E523906A94048F8B5088079 /* AlbraDisplay-LightItalic.otf */,
+				F50D3CAEBDE84A9CBD7DF18B /* AlbraDisplay-Medium.otf */,
+				BF3AAA3DD36D4C6CA35E851B /* AlbraDisplay-MediumItalic.otf */,
+				E9F596D304424160A5CA37FB /* AlbraDisplay-Regular.otf */,
+				60BDCCC1A4064A6A87AD3258 /* AlbraDisplay-RegularItalic.otf */,
+				D006F2902E12485B89FB55E1 /* AlbraDisplay-Semi.otf */,
+				09A24E054E6940F6ADB25CC1 /* AlbraDisplay-SemiItalic.otf */,
+				DE46095E24F443E7BCA2C056 /* AlbraGrotesk-Black.otf */,
+				139E70E966C242B9A7190FBB /* AlbraGrotesk-BlackItalic.otf */,
+				AED5E3C2C20746F6B5EA3E53 /* AlbraGrotesk-Bold.otf */,
+				E9E2A8FBC18947D8882090B6 /* AlbraGrotesk-BoldItalic.otf */,
+				A4B85DC4AD4348D9AAC0C7BB /* AlbraGrotesk-Light.otf */,
+				141E8D747D4A4FB989C247CD /* AlbraGrotesk-LightItalic.otf */,
+				CB12F78792804967A17F128F /* AlbraGrotesk-Medium.otf */,
+				B0D0F46DD6434481A9BFD1DD /* AlbraGrotesk-MediumItalic.otf */,
+				7E6E14FC7C86470DB9B5241E /* AlbraGrotesk-Regular.otf */,
+				D5C1E03670BC42ACA9AC59A3 /* AlbraGrotesk-RegularItalic.otf */,
+				F31C6F3BC2DD41D8A4490871 /* AlbraGrotesk-Semi.otf */,
+				7804666DAAAA41C5B0A8E48F /* AlbraGrotesk-SemiItalic.otf */,
+				8AA67F40AC254FFB84BCA8C6 /* AlbraSans-Black.otf */,
+				F7B139194E4D4635A0974D4B /* AlbraSans-BlackItalic.otf */,
+				4F8277BA7923494B8A9B1206 /* AlbraSans-Bold.otf */,
+				F5A8238E8F9B4E43BF5FAC5B /* AlbraSans-BoldItalic.otf */,
+				E86117FFA466453CA3DB7BDC /* AlbraSans-Light.otf */,
+				62D71F9FF932483EB7639E3A /* AlbraSans-LightItalic.otf */,
+				4CD06C24E41A4F6394F3A363 /* AlbraSans-Medium.otf */,
+				ED5E1B1F694F475DB42562E5 /* AlbraSans-MediumItalic.otf */,
+				C7FA7CE7A98E422EBF4527E0 /* AlbraSans-Regular.otf */,
+				F3EB63E34B2D4859AD5FE09E /* AlbraSans-RegularItalic.otf */,
+				DA6AB188BF614F708A5A0C71 /* AlbraSans-Semi.otf */,
+				57750B50FE314393B6880C87 /* AlbraSans-SemiItalic.otf */,
+				4BF4C839AA73480A861C8974 /* AlbraText-Black.otf */,
+				BADD22BB7D4A43DCAAFAA8E4 /* AlbraText-BlackItalic.otf */,
+				6569A6B228E649B4B46F9251 /* AlbraText-Bold.otf */,
+				93828FDD205B4CA6A0B163C0 /* AlbraText-BoldItalic.otf */,
+				A90EEB758DD44DF9A68B07E3 /* AlbraText-Light.otf */,
+				9A9D9EF38EDF415486977563 /* AlbraText-LightItalic.otf */,
+				BB98870835D5489CBCD928F8 /* AlbraText-Medium.otf */,
+				68C37986DCC64292AB24F193 /* AlbraText-MediumItalic.otf */,
+				1461DBAEB04C4517BB1B700B /* AlbraText-Regular.otf */,
+				BBE1B16BEECE4EE29EED30DC /* AlbraText-RegularItalic.otf */,
+				151E5985180D4092A3A00758 /* AlbraText-Semi.otf */,
+				657476193F2C4B3E9428B57F /* AlbraText-SemiItalic.otf */,
+				FB709D3C135C4131BB469106 /* Gilroy-Bold.ttf */,
+				1AF0F99FE25146EDA97EBC96 /* Gilroy-Heavy.ttf */,
+				E8463C8D76E64B318EB91684 /* Gilroy-Light.ttf */,
+				A991DFDF0ED74053A9519DC0 /* Gilroy-Medium.ttf */,
+				E1A2C281169A47AEAAE67749 /* Gilroy-Regular.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +328,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				5F1367386DD64FEE962D6EF0 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -244,6 +451,72 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				FB4147C5D0684FE9900920BC /* Albra-Black.otf in Resources */,
+				862A0167764A4981AA91516B /* Albra-BlackItalic.otf in Resources */,
+				73574B36C7784A59B5634E51 /* Albra-Bold.otf in Resources */,
+				AC1A6251BDBE4D8DAB80D1BE /* Albra-BoldItalic.otf in Resources */,
+				B61E9CAEC18445BCA62EF9FC /* Albra-Light.otf in Resources */,
+				43B9CA56C0C14C0FA0316C1A /* Albra-LightItalic.otf in Resources */,
+				BA4B7DD4A6814358993ABDB6 /* Albra-Medium.otf in Resources */,
+				907789A367A84BFDA45040AC /* Albra-MediumItalic.otf in Resources */,
+				349D7E870829440AA9317486 /* Albra-Regular.otf in Resources */,
+				3B5AD8970E5D42A89AD8E53E /* Albra-RegularItalic.otf in Resources */,
+				042DC52BCA3542D7BABD8659 /* Albra-Semi.otf in Resources */,
+				BE4EDE6BFAA94F82962B33D7 /* Albra-SemiItalic.otf in Resources */,
+				E0A2AB64E4294478934F94A1 /* Albra-Thin.otf in Resources */,
+				8449013F7B9C41FA803FCDCC /* AlbraDisplay-Black.otf in Resources */,
+				B783AFA4B92A4A26974DA88D /* AlbraDisplay-BlackItalic.otf in Resources */,
+				1FCD1820E390443B92760B51 /* AlbraDisplay-Bold.otf in Resources */,
+				89F21636ADE54F829BFCD80A /* AlbraDisplay-BoldItalic.otf in Resources */,
+				3836F3BB1069492B98B5919A /* AlbraDisplay-Light.otf in Resources */,
+				F6C3653029804E2584F83E3C /* AlbraDisplay-LightItalic.otf in Resources */,
+				D4BBB147BB9246D59556314B /* AlbraDisplay-Medium.otf in Resources */,
+				1E80758A9F864637BE6F2F5B /* AlbraDisplay-MediumItalic.otf in Resources */,
+				68C67979CF734C4B8E4D47A5 /* AlbraDisplay-Regular.otf in Resources */,
+				94DCABF5A5574F79BED35859 /* AlbraDisplay-RegularItalic.otf in Resources */,
+				67712C8C20914C7EA7638FFE /* AlbraDisplay-Semi.otf in Resources */,
+				18CA72B92C314FAC80F40AA4 /* AlbraDisplay-SemiItalic.otf in Resources */,
+				0456C00DE6204038A9595C99 /* AlbraGrotesk-Black.otf in Resources */,
+				63D328BD918F4BE7968240D1 /* AlbraGrotesk-BlackItalic.otf in Resources */,
+				8F8C490755164DAC9D3990FD /* AlbraGrotesk-Bold.otf in Resources */,
+				10DC7C32DAD74C729F93E10B /* AlbraGrotesk-BoldItalic.otf in Resources */,
+				CF6B9C4FA7C247ED9D749B1D /* AlbraGrotesk-Light.otf in Resources */,
+				34C18FE0D4534454BEDAF2CF /* AlbraGrotesk-LightItalic.otf in Resources */,
+				F527E8C99B53432882A12382 /* AlbraGrotesk-Medium.otf in Resources */,
+				4E9D85383D8E4F0FA90D08E0 /* AlbraGrotesk-MediumItalic.otf in Resources */,
+				37F569C1BE9447A8803B4027 /* AlbraGrotesk-Regular.otf in Resources */,
+				53B3B35DCEEB491F9B4F0082 /* AlbraGrotesk-RegularItalic.otf in Resources */,
+				46F44E7DD3164481B7B84FFE /* AlbraGrotesk-Semi.otf in Resources */,
+				985BFF7A23C44AD78E61CDFB /* AlbraGrotesk-SemiItalic.otf in Resources */,
+				CBD757109B7445C7934AF1C7 /* AlbraSans-Black.otf in Resources */,
+				CABCC8C397AB4CC48C1BB5D2 /* AlbraSans-BlackItalic.otf in Resources */,
+				3CD754D6FDF044EBB71A1649 /* AlbraSans-Bold.otf in Resources */,
+				33AD372DE2644EB5A332FE63 /* AlbraSans-BoldItalic.otf in Resources */,
+				7E3788457DC4419B80DCB4C1 /* AlbraSans-Light.otf in Resources */,
+				A8A706D992854CD492D53F94 /* AlbraSans-LightItalic.otf in Resources */,
+				6C5DACC62C414A369053B479 /* AlbraSans-Medium.otf in Resources */,
+				824D6CE18CFA428191931F72 /* AlbraSans-MediumItalic.otf in Resources */,
+				A10B0C84DAD4488F83819B2F /* AlbraSans-Regular.otf in Resources */,
+				181D697E022C4D8EAA91B62C /* AlbraSans-RegularItalic.otf in Resources */,
+				C3D4CB904F0A436E979B44B7 /* AlbraSans-Semi.otf in Resources */,
+				A2F353433EEA435396CE87E7 /* AlbraSans-SemiItalic.otf in Resources */,
+				386B421E7C9E416985B8DDD0 /* AlbraText-Black.otf in Resources */,
+				0D452017571C4C6C89056651 /* AlbraText-BlackItalic.otf in Resources */,
+				3DA1CE55DED94811AA3B39DD /* AlbraText-Bold.otf in Resources */,
+				CA59C2D19A154F4A8C890A10 /* AlbraText-BoldItalic.otf in Resources */,
+				A60E15DFF56B42778CA02325 /* AlbraText-Light.otf in Resources */,
+				63FC14F78AA741138289354D /* AlbraText-LightItalic.otf in Resources */,
+				BF4724795CB044A8B322CEEA /* AlbraText-Medium.otf in Resources */,
+				F334746968534946830EF1DC /* AlbraText-MediumItalic.otf in Resources */,
+				FEF6A422EE5440C5894C0161 /* AlbraText-Regular.otf in Resources */,
+				F0FE1C16CE134CC69E9BC7CB /* AlbraText-RegularItalic.otf in Resources */,
+				902D1908E9CC477AAB51C153 /* AlbraText-Semi.otf in Resources */,
+				93DB901B1A05417E8C044BD9 /* AlbraText-SemiItalic.otf in Resources */,
+				78EB73EE6F054AA2B1FCB8ED /* Gilroy-Bold.ttf in Resources */,
+				C0F1CF204E454F3AA53EA219 /* Gilroy-Heavy.ttf in Resources */,
+				F577B3DDE95B44BC8CDC2E3C /* Gilroy-Light.ttf in Resources */,
+				F19E260BD57E42E3B8D36DC5 /* Gilroy-Medium.ttf in Resources */,
+				510B7D4F84F545CD822B99F4 /* Gilroy-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
