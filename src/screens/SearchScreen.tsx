@@ -17,9 +17,10 @@ import MovieCard from '../components/MovieCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorView from '../components/ErrorView';
 import type { Movie } from '../types/movie.types';
+import type { SearchScreenProps } from '../types/navigation.types';
 import { AppFonts, FontFamilies } from '../constants/fonts';
 
-const SearchScreen: React.FC = () => {
+const SearchScreen: React.FC<SearchScreenProps> = ({ navigation }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [debouncedQuery, setDebouncedQuery] = useState('');
   const [page, setPage] = useState(1);
@@ -68,12 +69,20 @@ const SearchScreen: React.FC = () => {
   const movies = useMemo(() => data?.results || [], [data]);
   const totalPages = data?.total_pages || 0;
 
+  // Navigate to movie details
+  const handleMoviePress = useCallback(
+    (movie: Movie) => {
+      navigation.navigate('MovieDetails', { movieId: movie.id });
+    },
+    [navigation]
+  );
+
   // Optimized render item with useCallback
   const renderItem = useCallback(
     ({ item }: ListRenderItemInfo<Movie>) => (
-      <MovieCard movie={item} onPress={() => console.log('Movie pressed:', item.title)} />
+      <MovieCard movie={item} onPress={handleMoviePress} />
     ),
-    []
+    [handleMoviePress]
   );
 
   // Optimized key extractor
