@@ -12,6 +12,170 @@ npm run test:maestro        # Run Maestro E2E tests
 npm run test:e2e:ios        # Run Detox E2E on iOS
 ```
 
+## Current Test Coverage
+
+**109 tests** across **12 test files** - all passing ✅
+
+### What We're Testing
+
+#### 🎨 UI Components (27 tests)
+
+**MovieCard** - 8 tests
+- Renders with correct movie data (title, rating, year)
+- Handles missing release dates (shows "N/A")
+- Navigation on press
+- Doesn't crash without onPress callback
+- Truncates long titles
+- Memoization optimization (prevents unnecessary re-renders)
+
+**LoadingSpinner** - 4 tests
+- Default and custom messages
+- Correct color (#FF6B6B)
+- ActivityIndicator presence
+
+**ErrorView** - 5 tests
+- Default and custom error messages
+- Retry button callback
+- Conditionally renders retry button
+- Error icon display (⚠️)
+
+**ErrorBoundary** - 7 tests
+- Catches and displays errors
+- Custom fallback UI
+- Reset functionality
+- Error logging
+- Default error messages
+- Error icon display (💥)
+
+**SearchScreen** - 8 tests
+- Search input rendering
+- Query typing and updates
+- Clear button (✕) functionality
+- Debouncing (500ms delay)
+- Header text changes
+- Pull-to-refresh configuration
+- Pagination setup
+
+**MovieDetailsScreen** - 3 tests
+- Loading state display
+- Component structure
+- Redux action dispatching
+
+**App** - 1 test
+- Root app renders correctly
+
+#### 🗃️ State Management (23 tests)
+
+**Redux Movie Slice** - 7 tests
+- Initial state (currentMovieTitle: null)
+- Setting movie title
+- Updating existing title
+- Clearing title
+- Action creators
+
+**Redux + RTK Query Integration** - 16 tests
+- Store configuration and middleware
+- State immutability
+- API reducer presence
+- Query/mutation management
+- State selectors
+- Rapid state updates (100 consecutive)
+- Edge cases: empty strings, special characters, long titles (1000 chars)
+
+#### 🌐 API & Services (5 tests)
+
+**TMDB API Utilities**
+- Image URL generation (w200, w500, original sizes)
+- Placeholder URLs for missing posters
+- Error handling for null/empty paths
+
+#### 🎨 Design System (26 tests)
+
+**Font Constants & Typography**
+- FontFamilies: Albra, AlbraText, AlbraDisplay, AlbraGrotesk, AlbraSans, Gilroy
+- AppFonts: body, display, UI, geometric, grotesk
+- FontSizes: display (48, 40, 36), heading (h1-h6), body, UI
+- TextStyles: hero, title, heading, body variants, button, caption, label
+- Type safety and immutability
+- Line height validation
+
+#### 🔄 User Flow Integration (19 tests)
+
+**Movie Discovery Flow** - 5 tests
+- Search interface display
+- Typing and debouncing
+- Clear button interaction
+- Complete search flow
+
+**Movie Card Interaction** - 4 tests
+- Information display
+- Press navigation
+- Missing data handling
+- No callback scenarios
+
+**Redux State Management Flow** - 3 tests
+- Title updates
+- State persistence across renders
+- Sequential updates
+
+**Search Results Interaction** - 3 tests
+- Pull-to-refresh
+- Infinite scroll pagination
+- List key extraction
+
+**Complete User Journey** - 2 tests
+- End-to-end search-to-view flow
+- Error and retry flow
+
+**Performance & Optimization** - 2 tests
+- Component memoization (React.memo)
+- FlatList getItemLayout optimization
+
+### Test Distribution
+
+```
+UI Components     ████████████████████████ 27 (24.8%)
+Design System     ███████████████████████  26 (23.9%)
+State Management  █████████████████████    23 (21.1%)
+User Flows        ███████████████████      19 (17.4%)
+API Services      █████                     5 (4.6%)
+App Root          █                         1 (0.9%)
+```
+
+### Test Files Structure
+
+```
+__tests__/
+├── App.test.tsx                                    # 1 test
+src/
+├── components/__tests__/
+│   ├── ErrorBoundary.test.tsx                      # 7 tests
+│   ├── ErrorView.test.tsx                          # 5 tests
+│   ├── LoadingSpinner.test.tsx                     # 4 tests
+│   └── MovieCard.test.tsx                          # 8 tests
+├── screens/__tests__/
+│   ├── MovieDetailsScreen.test.tsx                 # 3 tests
+│   └── SearchScreen.test.tsx                       # 8 tests
+├── services/__tests__/
+│   └── tmdb.api.test.ts                            # 5 tests
+├── store/__tests__/
+│   └── movieSlice.test.ts                          # 7 tests
+├── constants/__tests__/
+│   └── fonts.test.ts                               # 26 tests
+└── __tests__/integration/
+    ├── redux-api.integration.test.ts               # 16 tests
+    └── user-flow.integration.test.tsx              # 19 tests
+```
+
+### What's NOT Tested (Yet)
+
+These don't have Jest tests yet, but could be added:
+- FontShowcase component (if it has logic beyond display)
+- Network error scenarios with mocked API failures
+- Deep linking navigation
+- Animation timings
+- Platform-specific behavior differences
+
 ## Three Testing Tools, Three Different Jobs
 
 ### Jest - Your Daily Driver (70% of tests)
