@@ -200,6 +200,7 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ navigation }) => {
 
       {/* Movies List */}
       <FlatList
+        testID="movie-list"
         data={movies}
         renderItem={renderItem}
         keyExtractor={keyExtractor}

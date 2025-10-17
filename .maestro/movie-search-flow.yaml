@@ -1,0 +1,48 @@
+appId: com.myreactnativeapp
+---
+# Movie Search Flow Test
+# This test verifies the main movie search and navigation functionality
+
+- launchApp
+
+# Verify search screen loads
+- assertVisible: "Popular Movies"
+
+# Test search functionality
+- tapOn: "Search movies..."
+- inputText: "Matrix"
+- assertVisible: "Search Results"
+
+# Wait for search results to load
+- waitForAnimationToEnd:
+    timeout: 3000
+
+# Test clear button
+- tapOn: "✕"
+- assertVisible: "Popular Movies"
+
+# Test movie selection
+- tapOn:
+    index: 0
+    id: "movie-card"
+
+# Verify details screen loads
+- assertVisible: "Overview"
+- assertVisible: "Rating"
+
+# Test scrolling in details
+- scroll
+
+# Go back to search
+- back
+
+# Verify we're back on search screen
+- assertVisible: "Popular Movies"
+
+# Test pagination - scroll to bottom
+- scrollUntilVisible:
+    element:
+      index: 10
+      id: "movie-card"
+    direction: DOWN
+    timeout: 5000

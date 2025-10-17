@@ -1,79 +1,211 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# MyReactNativeApp
 
-# Getting Started
+A movie discovery app built with React Native, featuring search, details, and a comprehensive testing setup.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Features
 
-## Step 1: Start the Metro Server
+- 🎬 Browse popular movies
+- 🔍 Search for movies
+- 📱 View detailed movie information
+- ⚡ Optimized performance with React.memo and FlatList
+- 🎨 Custom fonts (Gilroy & Albra)
+- 📦 Redux state management
+- 🧪 Full testing coverage (Jest, Detox, Maestro)
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Tech Stack
 
-To start Metro, run the following command from the _root_ of your React Native project:
+- React Native 0.72.6
+- Redux Toolkit (RTK Query)
+- React Navigation
+- FastImage for optimized images
+- TMDb API
+
+## Testing
+
+This project uses a comprehensive testing strategy:
+
+- **Jest** (70%) - Unit and component tests
+- **Maestro** (20%) - Quick smoke tests and user flows
+- **Detox** (10%) - Complex E2E scenarios
 
 ```bash
-# using npm
+npm test                    # Run all tests
+npm run test:watch          # Watch mode for development
+npm run test:coverage       # Generate coverage report
+npm run test:maestro        # Run Maestro E2E tests
+npm run test:e2e:ios        # Run Detox E2E on iOS
+```
+
+**Coverage**: 70% minimum across all metrics (lines, branches, functions, statements)
+
+📖 **[Full Testing Guide](./TESTING.md)** - Comprehensive testing documentation
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 16+
+- React Native development environment ([setup guide](https://reactnative.dev/docs/environment-setup))
+- Xcode (for iOS)
+- Android Studio (for Android)
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone <your-repo-url>
+cd MyReactNativeApp
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Set up environment variables
+Create a `.env` file in the root directory:
+```
+TMDB_API_KEY=your_api_key_here
+TMDB_BASE_URL=https://api.themoviedb.org/3
+TMDB_IMAGE_BASE_URL=https://image.tmdb.org/t/p
+```
+
+4. Install iOS dependencies (macOS only)
+```bash
+cd ios && pod install && cd ..
+```
+
+### Running the App
+
+Start Metro bundler:
+```bash
 npm start
-
-# OR using Yarn
-yarn start
 ```
 
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
-
+Run on iOS:
 ```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
 npm run ios
-
-# OR using Yarn
-yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+Run on Android:
+```bash
+npm run android
+```
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+## Project Structure
 
-## Step 3: Modifying your App
+```
+src/
+├── components/          # Reusable components
+│   ├── MovieCard.tsx
+│   ├── LoadingSpinner.tsx
+│   └── ErrorView.tsx
+├── screens/            # Screen components
+│   ├── SearchScreen.tsx
+│   └── MovieDetailsScreen.tsx
+├── services/           # API services (RTK Query)
+│   └── tmdb.api.ts
+├── store/              # Redux store & slices
+│   ├── index.ts
+│   └── movieSlice.ts
+├── types/              # TypeScript types
+├── constants/          # App constants (fonts, etc.)
+└── config/            # App configuration
+```
 
-Now that you have successfully run the app, let's modify it.
+## Available Scripts
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+### Development
+- `npm start` - Start Metro bundler
+- `npm run ios` - Run iOS app
+- `npm run android` - Run Android app
+- `npm run lint` - Run ESLint
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+### Testing
+- `npm test` - Run all tests
+- `npm run test:watch` - Run tests in watch mode
+- `npm run test:coverage` - Generate coverage report
+- `npm run test:unit` - Run unit tests only
+- `npm run test:maestro` - Run Maestro E2E tests
+- `npm run test:maestro:studio` - Open Maestro Studio
+- `npm run test:e2e:ios` - Run Detox E2E on iOS
+- `npm run test:e2e:android` - Run Detox E2E on Android
+- `npm run build:e2e:ios` - Build iOS app for E2E testing
+- `npm run build:e2e:android` - Build Android app for E2E testing
 
-## Congratulations! :tada:
+### Utilities
+- `npm run clean:android` - Clean Android build
+- `npm run clean:ios` - Clean iOS build
+- `npm run clean:pods` - Clean and reinstall CocoaPods
+- `npm run reset:ios` - Full iOS environment reset
 
-You've successfully run and modified your React Native App. :partying_face:
+## Performance Optimizations
 
-### Now what?
+This app includes several performance optimizations:
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+- **React.memo** on MovieCard component with custom comparison
+- **FastImage** for optimized image loading with priority levels
+- **FlatList optimizations**: getItemLayout, removeClippedSubviews, windowSize
+- **Debounced search** (500ms) to reduce API calls
+- **Pagination** for efficient data loading
 
-# Troubleshooting
+## API Integration
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+Using TMDb (The Movie Database) API with RTK Query:
+- Search movies
+- Get popular movies
+- Get movie details
 
-# Learn More
+All API calls are cached and optimized with RTK Query.
 
-To learn more about React Native, take a look at the following resources:
+## Troubleshooting
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+### Common Issues
+
+**iOS build fails**
+```bash
+npm run reset:ios
+```
+
+**Android build issues**
+```bash
+npm run clean:android
+cd android && ./gradlew clean && cd ..
+```
+
+**Metro bundler cache issues**
+```bash
+npm start -- --reset-cache
+```
+
+**Tests failing**
+```bash
+# Make sure all dependencies are installed
+npm install
+
+# Run tests in verbose mode
+npm test -- --verbose
+```
+
+See [TESTING.md](./TESTING.md) for testing-specific troubleshooting.
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Write tests for your changes
+4. Commit your changes (`git commit -m 'Add amazing feature'`)
+5. Push to the branch (`git push origin feature/amazing-feature`)
+6. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License.
+
+## Resources
+
+- [React Native Docs](https://reactnative.dev)
+- [Redux Toolkit Docs](https://redux-toolkit.js.org/)
+- [React Navigation Docs](https://reactnavigation.org/)
+- [TMDb API Docs](https://developers.themoviedb.org/3)
+- [Testing Guide](./TESTING.md)

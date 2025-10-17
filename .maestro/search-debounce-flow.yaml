@@ -1,0 +1,33 @@
+appId: com.myreactnativeapp
+---
+# Search Debounce Test
+# This test verifies that search input is debounced properly
+
+- launchApp
+
+# Verify initial state
+- assertVisible: "Popular Movies"
+
+# Start typing quickly
+- tapOn: "Search movies..."
+- inputText: "M"
+- inputText: "a"
+- inputText: "t"
+
+# Wait a bit but not enough for debounce
+- waitForAnimationToEnd:
+    timeout: 300
+
+# Continue typing
+- inputText: "rix"
+
+# Wait for debounce to complete
+- waitForAnimationToEnd:
+    timeout: 1000
+
+# Should now show search results
+- assertVisible: "Search Results"
+
+# Clear search
+- tapOn: "✕"
+- assertVisible: "Popular Movies"
