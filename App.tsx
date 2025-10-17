@@ -1,118 +1,163 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
+ * Movie Search App
+ * Built with React Native, Redux Toolkit, and RTK Query
  *
  * @format
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import { StatusBar, View, TouchableOpacity, Text, Platform } from 'react-native';
+import { Provider } from 'react-redux';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import ErrorBoundary from './src/components/ErrorBoundary';
+import SearchScreen from './src/screens/SearchScreen';
+import MovieDetailsScreen from './src/screens/MovieDetailsScreen';
+import { store } from './src/store';
+import { FontFamilies } from './src/constants/fonts';
+import type { RootStackParamList } from './src/types/navigation.types';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { RootState } from './src/store';
+import { clearCurrentMovieTitle } from './src/store/movieSlice';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+const linking = {
+  prefixes: ['myreactnativeapp://', 'https://myreactnativeapp.com'],
+  config: {
+    screens: {
+      Search: 'search',
+      MovieDetails: 'movie/:movieId',
+    },
+  },
+};
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
-function Section({children, title}: SectionProps): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
+const CustomHeader = ({ title, onGoBack }: { title: string; onGoBack?: () => void }) => {
+  const dispatch = useDispatch();
+  const movieTitle = useSelector((state: RootState) => state.movie.currentMovieTitle);
+  const displayTitle = movieTitle || title;
 
-function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+  // Truncate title to maximum 25 characters for better fit
+  const truncatedDisplayTitle = displayTitle.length > 25
+    ? `${displayTitle.substring(0, 22)}...`
+    : displayTitle;
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  const handleGoBack = () => {
+    dispatch(clearCurrentMovieTitle());
+    if (onGoBack) {
+      onGoBack();
+    }
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
+    <View style={{
+      height: 120,
+      backgroundColor: '#1E1E1E',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      paddingHorizontal: 16,
+      position: 'relative',
+      // marginBottom: 60,
+    }}>
+      {onGoBack && (
+        <TouchableOpacity
+          onPress={handleGoBack}
           style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
+            position: 'absolute',
+            left: 16,
+            padding: 8,
+          }}
+        >
+          <Text style={{
+            color: '#FFFFFF',
+            fontSize: 26,            
+            fontFamily: FontFamilies.Gilroy.Heavy,
+            marginTop: Platform.OS === 'ios' ? 50 : 45,
           }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+            ←
+          </Text>
+        </TouchableOpacity>
+      )}
+      <Text
+      numberOfLines={2}
+      adjustsFontSizeToFit
+      style={{
+        color: '#FFFFFF',
+        fontSize: 18,
+        fontFamily: FontFamilies.Gilroy.Heavy,
+        textAlign: 'center',
+        // paddingBottom: 6, // 5-7px spacing below title
+        marginBottom: -50,
+        lineHeight: 22,
+      }}>
+        {truncatedDisplayTitle}
+      </Text>
+    </View>
+  );
+};
+
+function App(): JSX.Element {
+  
+  return (
+    <ErrorBoundary>
+      <Provider store={store}>
+        <SafeAreaProvider
+          style={{ backgroundColor: '#121212' }} // Ensure consistent background
+>
+          <StatusBar
+            barStyle="light-content"
+            backgroundColor="transparent"
+            translucent={true}                 
+          />
+          <NavigationContainer linking={linking}>
+            <Stack.Navigator
+              screenOptions={{
+                headerStyle: {
+                  backgroundColor: '#1E1E1E',
+                },
+                headerTintColor: '#FFFFFF',
+                headerTitleStyle: {
+                  fontFamily: FontFamilies.Gilroy.Heavy,
+                  fontSize: 20,
+                },
+                contentStyle: {
+                  backgroundColor: '#121212',
+                },
+                animation: 'slide_from_right',
+                animationDuration: 200,                
+              }}>
+              <Stack.Screen
+                name="Search"
+                component={SearchScreen}
+                options={{
+                  title: 'Movie Search',
+                  headerTitleAlign: 'center',
+                }}
+              />
+              <Stack.Screen
+                name="MovieDetails"
+                component={MovieDetailsScreen}
+                options={({ navigation }) => ({
+                  headerTitleAlign: 'center',
+                  headerBackTitle: '',
+                  headerBackTitleVisible: false,
+                  header: () => (
+                    <CustomHeader
+                      title="Loading..."
+                      onGoBack={() => navigation.goBack()}
+                    />
+                  ),
+                })}
+              />
+            </Stack.Navigator>
+          </NavigationContainer>
+        </SafeAreaProvider>
+      </Provider>
+    </ErrorBoundary>
   );
 }
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default App;
