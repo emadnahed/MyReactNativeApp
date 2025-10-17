@@ -48,9 +48,40 @@ jest.mock('@react-navigation/native', () => {
 // Silence the warning: Animated: `useNativeDriver` is not supported
 jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
 
-// Mock console methods to reduce noise in tests
-global.console = {
-  ...console,
-  error: jest.fn(),
-  warn: jest.fn(),
+// Selectively silence known benign warnings to reduce test output noise
+// Allow other console.error and console.warn to surface real issues
+const originalError = console.error;
+const originalWarn = console.warn;
+
+console.error = (...args) => {
+  // Silence specific known benign errors
+  const message = args[0]?.toString() || '';
+
+  // Add patterns for known benign errors here
+  const benignPatterns = [
+    'Warning: ReactDOM.render',
+    'Warning: useLayoutEffect',
+  ];
+
+  if (benignPatterns.some(pattern => message.includes(pattern))) {
+    return;
+  }
+
+  originalError(...args);
+};
+
+console.warn = (...args) => {
+  // Silence specific known benign warnings
+  const message = args[0]?.toString() || '';
+
+  // Add patterns for known benign warnings here
+  const benignPatterns = [
+    'Animated: `useNativeDriver`',
+  ];
+
+  if (benignPatterns.some(pattern => message.includes(pattern))) {
+    return;
+  }
+
+  originalWarn(...args);
 };

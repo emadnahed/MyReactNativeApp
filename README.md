@@ -10,7 +10,7 @@ A movie discovery app built with React Native, featuring search, details, and a 
 - ⚡ Optimized performance with React.memo and FlatList
 - 🎨 Custom fonts (Gilroy & Albra)
 - 📦 Redux state management (RTK Query)
-- 🧪 Full testing coverage (Jest, Detox, Maestro) - **109 tests**
+- 🧪 Comprehensive testing coverage (Jest, Detox, Maestro)
 - 💀 Skeleton loading states for better UX
 - ♿ Full accessibility support (VoiceOver & TalkBack)
 - 🔄 Error handling with retry mechanisms
@@ -133,8 +133,8 @@ src/
 - `npm run android` - Run Android app
 - `npm run lint` - Run ESLint
 
-### Testing (109 tests total)
-- `npm test` - Run Jest tests (109 tests)
+### Testing
+- `npm test` - Run Jest tests
 - `npm run test:jest` - Run Jest tests only
 - `npm run test:jest:watch` - Run Jest in watch mode
 - `npm run test:jest:coverage` - Generate coverage report
@@ -144,13 +144,15 @@ src/
 - `npm run test:detox:android` - Run Detox E2E on Android
 - `npm run test:all` - Run all test frameworks
 
-**Test Coverage:**
-- UI Components: 27 tests
-- State Management: 23 tests
-- Design System: 26 tests
-- User Flows: 19 tests
-- API Services: 5 tests
-- Other: 9 tests
+**Test Coverage includes:**
+- UI Components (MovieCard, LoadingSpinner, ErrorView, ErrorBoundary, Screens)
+- State Management (Redux slices, RTK Query integration)
+- Design System (Typography, fonts, text styles)
+- User Flows (Search, navigation, interactions)
+- API Services (TMDb API utilities)
+- Integration tests (End-to-end user journeys)
+
+Run `npm run test:jest:coverage` to see detailed coverage metrics.
 
 ### Utilities
 - `npm run clean:android` - Clean Android build

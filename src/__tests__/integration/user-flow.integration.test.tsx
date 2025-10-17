@@ -280,12 +280,25 @@ describe('User Flow Integration Tests', () => {
       // Step 3: Wait for debounce
       jest.advanceTimersByTime(500);
 
-      // Step 4: User sees results header change
-      await waitFor(() => {
-        expect(
-          getByText('Popular Movies') || getByText('Search Results')
-        ).toBeTruthy();
-      });
+      // Step 4: User sees results header (either Popular Movies or Search Results)
+      // After debounce, one of these should be visible
+      const hasPopularMovies = () => {
+        try {
+          getByText('Popular Movies');
+          return true;
+        } catch {
+          return false;
+        }
+      };
+      const hasSearchResults = () => {
+        try {
+          getByText('Search Results');
+          return true;
+        } catch {
+          return false;
+        }
+      };
+      expect(hasPopularMovies() || hasSearchResults()).toBe(true);
 
       // Step 5: User can clear search
       const clearButton = getByText('✕');

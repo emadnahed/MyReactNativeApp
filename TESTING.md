@@ -14,13 +14,15 @@ npm run test:e2e:ios        # Run Detox E2E on iOS
 
 ## Current Test Coverage
 
-**109 tests** across **12 test files** - all passing ✅
+Comprehensive test suite covering all critical functionality ✅
+
+> **Note**: Run `npm run test:jest:coverage` to see current test counts and detailed coverage metrics. The numbers below represent test categories, not specific counts, as they evolve with the codebase.
 
 ### What We're Testing
 
-#### 🎨 UI Components (27 tests)
+#### 🎨 UI Components
 
-**MovieCard** - 8 tests
+**MovieCard**
 - Renders with correct movie data (title, rating, year)
 - Handles missing release dates (shows "N/A")
 - Navigation on press
@@ -28,143 +30,130 @@ npm run test:e2e:ios        # Run Detox E2E on iOS
 - Truncates long titles
 - Memoization optimization (prevents unnecessary re-renders)
 
-**LoadingSpinner** - 4 tests
+**LoadingSpinner**
 - Default and custom messages
-- Correct color (#FF6B6B)
+- Correct color styling
 - ActivityIndicator presence
 
-**ErrorView** - 5 tests
+**ErrorView**
 - Default and custom error messages
 - Retry button callback
 - Conditionally renders retry button
-- Error icon display (⚠️)
+- Error icon display
 
-**ErrorBoundary** - 7 tests
+**ErrorBoundary**
 - Catches and displays errors
 - Custom fallback UI
 - Reset functionality
 - Error logging
 - Default error messages
-- Error icon display (💥)
 
-**SearchScreen** - 8 tests
+**SearchScreen**
 - Search input rendering
 - Query typing and updates
-- Clear button (✕) functionality
+- Clear button functionality
 - Debouncing (500ms delay)
 - Header text changes
 - Pull-to-refresh configuration
 - Pagination setup
 
-**MovieDetailsScreen** - 3 tests
+**MovieDetailsScreen**
 - Loading state display
 - Component structure
 - Redux action dispatching
 
-**App** - 1 test
+**App**
 - Root app renders correctly
 
-#### 🗃️ State Management (23 tests)
+#### 🗃️ State Management
 
-**Redux Movie Slice** - 7 tests
-- Initial state (currentMovieTitle: null)
-- Setting movie title
-- Updating existing title
+**Redux Movie Slice**
+- Initial state management
+- Setting and updating movie title
 - Clearing title
 - Action creators
 
-**Redux + RTK Query Integration** - 16 tests
+**Redux + RTK Query Integration**
 - Store configuration and middleware
 - State immutability
 - API reducer presence
 - Query/mutation management
 - State selectors
-- Rapid state updates (100 consecutive)
-- Edge cases: empty strings, special characters, long titles (1000 chars)
+- Rapid state updates
+- Edge cases: empty strings, special characters, long titles
 
-#### 🌐 API & Services (5 tests)
+#### 🌐 API & Services
 
 **TMDB API Utilities**
-- Image URL generation (w200, w500, original sizes)
+- Image URL generation (multiple sizes)
 - Placeholder URLs for missing posters
 - Error handling for null/empty paths
 
-#### 🎨 Design System (26 tests)
+#### 🎨 Design System
 
 **Font Constants & Typography**
 - FontFamilies: Albra, AlbraText, AlbraDisplay, AlbraGrotesk, AlbraSans, Gilroy
 - AppFonts: body, display, UI, geometric, grotesk
-- FontSizes: display (48, 40, 36), heading (h1-h6), body, UI
+- FontSizes: display, heading, body, UI
 - TextStyles: hero, title, heading, body variants, button, caption, label
 - Type safety and immutability
 - Line height validation
 
-#### 🔄 User Flow Integration (19 tests)
+#### 🔄 User Flow Integration
 
-**Movie Discovery Flow** - 5 tests
+**Movie Discovery Flow**
 - Search interface display
 - Typing and debouncing
 - Clear button interaction
 - Complete search flow
 
-**Movie Card Interaction** - 4 tests
+**Movie Card Interaction**
 - Information display
 - Press navigation
 - Missing data handling
 - No callback scenarios
 
-**Redux State Management Flow** - 3 tests
+**Redux State Management Flow**
 - Title updates
 - State persistence across renders
 - Sequential updates
 
-**Search Results Interaction** - 3 tests
+**Search Results Interaction**
 - Pull-to-refresh
 - Infinite scroll pagination
 - List key extraction
 
-**Complete User Journey** - 2 tests
+**Complete User Journey**
 - End-to-end search-to-view flow
 - Error and retry flow
 
-**Performance & Optimization** - 2 tests
+**Performance & Optimization**
 - Component memoization (React.memo)
 - FlatList getItemLayout optimization
-
-### Test Distribution
-
-```
-UI Components     ████████████████████████ 27 (24.8%)
-Design System     ███████████████████████  26 (23.9%)
-State Management  █████████████████████    23 (21.1%)
-User Flows        ███████████████████      19 (17.4%)
-API Services      █████                     5 (4.6%)
-App Root          █                         1 (0.9%)
-```
 
 ### Test Files Structure
 
 ```
 __tests__/
-├── App.test.tsx                                    # 1 test
+├── App.test.tsx
 src/
 ├── components/__tests__/
-│   ├── ErrorBoundary.test.tsx                      # 7 tests
-│   ├── ErrorView.test.tsx                          # 5 tests
-│   ├── LoadingSpinner.test.tsx                     # 4 tests
-│   └── MovieCard.test.tsx                          # 8 tests
+│   ├── ErrorBoundary.test.tsx
+│   ├── ErrorView.test.tsx
+│   ├── LoadingSpinner.test.tsx
+│   └── MovieCard.test.tsx
 ├── screens/__tests__/
-│   ├── MovieDetailsScreen.test.tsx                 # 3 tests
-│   └── SearchScreen.test.tsx                       # 8 tests
+│   ├── MovieDetailsScreen.test.tsx
+│   └── SearchScreen.test.tsx
 ├── services/__tests__/
-│   └── tmdb.api.test.ts                            # 5 tests
+│   └── tmdb.api.test.ts
 ├── store/__tests__/
-│   └── movieSlice.test.ts                          # 7 tests
+│   └── movieSlice.test.ts
 ├── constants/__tests__/
-│   └── fonts.test.ts                               # 26 tests
+│   └── fonts.test.ts
 └── __tests__/integration/
-    ├── redux-api.integration.test.ts               # 16 tests
-    └── user-flow.integration.test.tsx              # 19 tests
+    ├── redux-api.integration.test.ts
+    └── user-flow.integration.test.tsx
 ```
 
 ### What's NOT Tested (Yet)
