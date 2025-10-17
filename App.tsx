@@ -17,11 +17,10 @@ import MovieDetailsScreen from './src/screens/MovieDetailsScreen';
 import { store } from './src/store';
 import { FontFamilies } from './src/constants/fonts';
 import type { RootStackParamList } from './src/types/navigation.types';
+import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { RootState } from './src/store';
-
-const Stack = createNativeStackNavigator<RootStackParamList>();
-
+import { clearCurrentMovieTitle } from './src/store/movieSlice';
 
 const linking = {
   prefixes: ['myreactnativeapp://', 'https://myreactnativeapp.com'],
@@ -33,7 +32,10 @@ const linking = {
   },
 };
 
+const Stack = createNativeStackNavigator<RootStackParamList>();
+
 const CustomHeader = ({ title, onGoBack }: { title: string; onGoBack?: () => void }) => {
+  const dispatch = useDispatch();
   const movieTitle = useSelector((state: RootState) => state.movie.currentMovieTitle);
   const displayTitle = movieTitle || title;
 
@@ -41,6 +43,13 @@ const CustomHeader = ({ title, onGoBack }: { title: string; onGoBack?: () => voi
   const truncatedDisplayTitle = displayTitle.length > 25
     ? `${displayTitle.substring(0, 22)}...`
     : displayTitle;
+
+  const handleGoBack = () => {
+    dispatch(clearCurrentMovieTitle());
+    if (onGoBack) {
+      onGoBack();
+    }
+  };
 
   return (
     <View style={{
@@ -55,7 +64,7 @@ const CustomHeader = ({ title, onGoBack }: { title: string; onGoBack?: () => voi
     }}>
       {onGoBack && (
         <TouchableOpacity
-          onPress={onGoBack}
+          onPress={handleGoBack}
           style={{
             position: 'absolute',
             left: 16,
@@ -137,7 +146,7 @@ function App(): JSX.Element {
                   headerBackTitleVisible: false,
                   header: () => (
                     <CustomHeader
-                      title="Loading..r"
+                      title="Loading..."
                       onGoBack={() => navigation.goBack()}
                     />
                   ),
