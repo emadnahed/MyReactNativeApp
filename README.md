@@ -5,12 +5,16 @@ A movie discovery app built with React Native, featuring search, details, and a 
 ## Features
 
 - 🎬 Browse popular movies
-- 🔍 Search for movies
+- 🔍 Search for movies with debouncing
 - 📱 View detailed movie information
 - ⚡ Optimized performance with React.memo and FlatList
 - 🎨 Custom fonts (Gilroy & Albra)
-- 📦 Redux state management
-- 🧪 Full testing coverage (Jest, Detox, Maestro)
+- 📦 Redux state management (RTK Query)
+- 🧪 Full testing coverage (Jest, Detox, Maestro) - **109 tests**
+- 💀 Skeleton loading states for better UX
+- ♿ Full accessibility support (VoiceOver & TalkBack)
+- 🔄 Error handling with retry mechanisms
+- 🎭 Empty states for all scenarios
 
 ## Tech Stack
 
@@ -97,20 +101,28 @@ npm run android
 ```
 src/
 ├── components/          # Reusable components
-│   ├── MovieCard.tsx
-│   ├── LoadingSpinner.tsx
-│   └── ErrorView.tsx
+│   ├── MovieCard.tsx           # Movie card with accessibility
+│   ├── SkeletonMovieCard.tsx   # Skeleton loading state
+│   ├── LoadingSpinner.tsx      # Loading indicator
+│   ├── ErrorView.tsx           # Error state with retry
+│   ├── ErrorBoundary.tsx       # React error boundary
+│   └── FontShowcase.tsx        # Font display component
 ├── screens/            # Screen components
-│   ├── SearchScreen.tsx
-│   └── MovieDetailsScreen.tsx
+│   ├── SearchScreen.tsx        # Search & popular movies
+│   └── MovieDetailsScreen.tsx  # Movie details view
 ├── services/           # API services (RTK Query)
-│   └── tmdb.api.ts
+│   └── tmdb.api.ts             # TMDb API integration
 ├── store/              # Redux store & slices
-│   ├── index.ts
-│   └── movieSlice.ts
+│   ├── index.ts                # Store configuration
+│   └── movieSlice.ts           # Movie state slice
 ├── types/              # TypeScript types
-├── constants/          # App constants (fonts, etc.)
-└── config/            # App configuration
+│   ├── movie.types.ts
+│   └── navigation.types.ts
+├── constants/          # App constants
+│   └── fonts.ts                # Typography system
+└── __tests__/          # Test files (109 tests)
+    ├── integration/            # Integration tests
+    └── ...                     # Component & unit tests
 ```
 
 ## Available Scripts
@@ -121,17 +133,24 @@ src/
 - `npm run android` - Run Android app
 - `npm run lint` - Run ESLint
 
-### Testing
-- `npm test` - Run all tests
-- `npm run test:watch` - Run tests in watch mode
-- `npm run test:coverage` - Generate coverage report
-- `npm run test:unit` - Run unit tests only
+### Testing (109 tests total)
+- `npm test` - Run Jest tests (109 tests)
+- `npm run test:jest` - Run Jest tests only
+- `npm run test:jest:watch` - Run Jest in watch mode
+- `npm run test:jest:coverage` - Generate coverage report
 - `npm run test:maestro` - Run Maestro E2E tests
 - `npm run test:maestro:studio` - Open Maestro Studio
-- `npm run test:e2e:ios` - Run Detox E2E on iOS
-- `npm run test:e2e:android` - Run Detox E2E on Android
-- `npm run build:e2e:ios` - Build iOS app for E2E testing
-- `npm run build:e2e:android` - Build Android app for E2E testing
+- `npm run test:detox:ios` - Run Detox E2E on iOS
+- `npm run test:detox:android` - Run Detox E2E on Android
+- `npm run test:all` - Run all test frameworks
+
+**Test Coverage:**
+- UI Components: 27 tests
+- State Management: 23 tests
+- Design System: 26 tests
+- User Flows: 19 tests
+- API Services: 5 tests
+- Other: 9 tests
 
 ### Utilities
 - `npm run clean:android` - Clean Android build
@@ -145,9 +164,35 @@ This app includes several performance optimizations:
 
 - **React.memo** on MovieCard component with custom comparison
 - **FastImage** for optimized image loading with priority levels
-- **FlatList optimizations**: getItemLayout, removeClippedSubviews, windowSize
+- **FlatList optimizations**: getItemLayout, removeClippedSubviews, windowSize, batch rendering
 - **Debounced search** (500ms) to reduce API calls
-- **Pagination** for efficient data loading
+- **Pagination** for efficient data loading with infinite scroll
+- **Skeleton loaders** instead of spinners for perceived performance
+- **Redux RTK Query** for automatic caching and request deduplication
+
+## Accessibility Features
+
+Built with accessibility in mind:
+
+- ✅ **Screen reader support** - VoiceOver (iOS) and TalkBack (Android)
+- ✅ **Descriptive labels** - All interactive elements have meaningful labels
+- ✅ **Semantic roles** - Proper roles (button, search, alert, progressbar)
+- ✅ **Hints and feedback** - Context-aware hints for user actions
+- ✅ **Keyboard navigation** - Full keyboard accessibility
+- ✅ **Focus management** - Logical focus order
+
+Test with VoiceOver: `Settings > Accessibility > VoiceOver` (iOS)
+Test with TalkBack: `Settings > Accessibility > TalkBack` (Android)
+
+## Error Handling
+
+Robust error handling throughout:
+
+- **Network errors** - Automatic retry with user feedback
+- **Loading states** - Skeleton loaders and spinners
+- **Empty states** - Helpful messages for all scenarios
+- **Error boundaries** - Catches React errors gracefully
+- **API errors** - Clear error messages with retry buttons
 
 ## API Integration
 

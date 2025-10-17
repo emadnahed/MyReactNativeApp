@@ -16,6 +16,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useSearchMoviesQuery, useGetPopularMoviesQuery } from '../services/tmdb.api';
 import MovieCard from '../components/MovieCard';
 import LoadingSpinner from '../components/LoadingSpinner';
+import SkeletonMovieCard from '../components/SkeletonMovieCard';
 import ErrorView from '../components/ErrorView';
 import type { Movie } from '../types/movie.types';
 import type { SearchScreenProps } from '../types/navigation.types';
@@ -132,16 +133,37 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ navigation }) => {
     return null;
   }, [isLoading, movies.length]);
 
-  // Empty component
+  // Empty component - show skeletons on initial load, empty states otherwise
   const ListEmptyComponent = useMemo(() => {
-    if (isLoading) {
-      return <LoadingSpinner message={shouldSearch ? 'Searching...' : 'Loading popular movies...'} />;
+    if (isLoading && movies.length === 0) {
+      // Show skeleton cards on initial load for better UX
+      return (
+        <View style={styles.skeletonContainer}>
+          <View style={styles.skeletonRow}>
+            <SkeletonMovieCard />
+            <SkeletonMovieCard />
+          </View>
+          <View style={styles.skeletonRow}>
+            <SkeletonMovieCard />
+            <SkeletonMovieCard />
+          </View>
+          <View style={styles.skeletonRow}>
+            <SkeletonMovieCard />
+            <SkeletonMovieCard />
+          </View>
+        </View>
+      );
     }
 
     if (shouldSearch && debouncedQuery) {
       return (
-        <View style={styles.emptyContainer}>
-          <Text style={styles.emptyIcon}>🔍</Text>
+        <View
+          style={styles.emptyContainer}
+          accessible={true}
+          accessibilityLabel="No movies found"
+          accessibilityRole="text"
+        >
+          <Text style={styles.emptyIcon} accessible={false}>🔍</Text>
           <Text style={styles.emptyText}>No movies found for "{debouncedQuery}"</Text>
           <Text style={styles.emptySubtext}>Try a different search term</Text>
         </View>
@@ -149,13 +171,18 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ navigation }) => {
     }
 
     return (
-      <View style={styles.emptyContainer}>
-        <Text style={styles.emptyIcon}>🎬</Text>
+      <View
+        style={styles.emptyContainer}
+        accessible={true}
+        accessibilityLabel="Search for movies"
+        accessibilityRole="text"
+      >
+        <Text style={styles.emptyIcon} accessible={false}>🎬</Text>
         <Text style={styles.emptyText}>Search for movies</Text>
         <Text style={styles.emptySubtext}>Type in the search bar above</Text>
       </View>
     );
-  }, [isLoading, shouldSearch, debouncedQuery]);
+  }, [isLoading, shouldSearch, debouncedQuery, movies.length]);
 
   if (error) {
     return (
@@ -169,8 +196,13 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container} edges={['left', 'right', 'bottom']}>
       {/* Search Bar */}
-      <View style={styles.searchContainer}>
-        <Text style={styles.searchIcon}>🔍</Text>
+      <View
+        style={styles.searchContainer}
+        accessible={true}
+        accessibilityLabel="Search movies"
+        accessibilityRole="search"
+      >
+        <Text style={styles.searchIcon} accessible={false}>🔍</Text>
         <TextInput
           style={styles.searchInput}
           placeholder="Search movies..."
@@ -179,6 +211,9 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ navigation }) => {
           onChangeText={handleSearchChange}
           returnKeyType="search"
           onSubmitEditing={Keyboard.dismiss}
+          accessible={true}
+          accessibilityLabel="Search input"
+          accessibilityHint="Type to search for movies"
         />
         {searchQuery.length > 0 && (
           <Text
@@ -187,7 +222,11 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ navigation }) => {
               setSearchQuery('');
               setDebouncedQuery('');
               setPage(1);
-            }}>
+            }}
+            accessible={true}
+            accessibilityLabel="Clear search"
+            accessibilityRole="button"
+            accessibilityHint="Double tap to clear search text">
             ✕
           </Text>
         )}
@@ -303,6 +342,14 @@ const styles = StyleSheet.create({
     color: '#666666',
     fontSize: 14,
     fontFamily: AppFonts.body.regular,
+  },
+  skeletonContainer: {
+    width: '100%',
+  },
+  skeletonRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 0,
   },
 });
 

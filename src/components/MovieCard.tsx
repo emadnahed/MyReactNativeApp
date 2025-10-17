@@ -1,3 +1,19 @@
+/**
+ * MovieCard Component
+ *
+ * Displays a movie poster card with title, rating, and year.
+ * Optimized with React.memo for performance in large lists.
+ *
+ * @component
+ * @example
+ * ```tsx
+ * <MovieCard
+ *   movie={movieData}
+ *   onPress={(movie) => navigate('Details', { movieId: movie.id })}
+ * />
+ * ```
+ */
+
 import React, { memo } from 'react';
 import {
   View,
@@ -12,18 +28,31 @@ import type { Movie } from '../types/movie.types';
 import { getImageUrl } from '../services/tmdb.api';
 import { AppFonts, FontFamilies } from '../constants/fonts';
 
+/**
+ * Props for the MovieCard component
+ */
 interface MovieCardProps {
+  /** Movie data from TMDb API */
   movie: Movie;
+  /** Optional callback when card is pressed */
   onPress?: (movie: Movie) => void;
 }
 
 const { width } = Dimensions.get('window');
+/** Card width for 2-column grid layout */
 const CARD_WIDTH = (width - 48) / 2; // 2 columns with padding
 
+/**
+ * Movie card component with poster, title, rating and year
+ * Memoized to prevent unnecessary re-renders
+ */
 const MovieCard: React.FC<MovieCardProps> = ({ movie, onPress }) => {
   const handlePress = () => {
     onPress?.(movie);
   };
+
+  const year = movie.release_date ? new Date(movie.release_date).getFullYear() : 'N/A';
+  const rating = movie.vote_average.toFixed(1);
 
   return (
     <View style={styles.container}>
@@ -31,7 +60,11 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, onPress }) => {
         testID="movie-card"
         style={styles.card}
         onPress={handlePress}
-        activeOpacity={0.7}>
+        activeOpacity={0.7}
+        accessible={true}
+        accessibilityLabel={`${movie.title}, rating ${rating} stars, released ${year}`}
+        accessibilityRole="button"
+        accessibilityHint="Double tap to view movie details">
         <FastImage
           source={{
             uri: getImageUrl(movie.poster_path, 'w500'),
@@ -39,20 +72,21 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, onPress }) => {
           }}
           style={styles.poster}
           resizeMode={FastImage.resizeMode.cover}
+          accessible={false}
         />
         <View style={styles.infoContainer}>
-          <Text style={styles.title} numberOfLines={2} ellipsizeMode="tail">
+          <Text style={styles.title} numberOfLines={2} ellipsizeMode="tail" accessible={false}>
             {movie.title}
           </Text>
           <View style={{flexDirection: 'row-reverse', alignItems: 'center', justifyContent: 'space-between'}}>
           <View style={styles.ratingContainer}>
-            <Text style={styles.rating}>
-              {movie.vote_average.toFixed(1)}
+            <Text style={styles.rating} accessible={false}>
+              {rating}
             </Text>
-            <Text style={styles.ratingIcon}> ★</Text>
+            <Text style={styles.ratingIcon} accessible={false}> ★</Text>
           </View>
-          <Text style={styles.year}>
-            {movie.release_date ? new Date(movie.release_date).getFullYear() : 'N/A'}
+          <Text style={styles.year} accessible={false}>
+            {year}
           </Text>
         </View>
         </View>
