@@ -1,0 +1,29 @@
+appId: com.myreactnativeapp
+---
+# Pull to Refresh Test
+# This test verifies the pull-to-refresh functionality
+
+- launchApp
+
+# Wait for initial load
+- waitForAnimationToEnd:
+    timeout: 3000
+
+# Verify movies are loaded
+- assertVisible:
+    index: 0
+    id: "movie-card"
+
+# Perform pull to refresh
+- swipe:
+    direction: DOWN
+    duration: 500
+
+# Wait for refresh to complete
+- waitForAnimationToEnd:
+    timeout: 3000
+
+# Verify movies are still visible (refreshed)
+- assertVisible:
+    index: 0
+    id: "movie-card"
