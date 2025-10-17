@@ -10,6 +10,7 @@ import {
   RefreshControl,
   Keyboard,
   Platform,
+  Dimensions,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useSearchMoviesQuery, useGetPopularMoviesQuery } from '../services/tmdb.api';
@@ -19,6 +20,11 @@ import ErrorView from '../components/ErrorView';
 import type { Movie } from '../types/movie.types';
 import type { SearchScreenProps } from '../types/navigation.types';
 import { AppFonts, FontFamilies } from '../constants/fonts';
+
+const { width } = Dimensions.get('window');
+const CARD_WIDTH = (width - 48) / 2; // 2 columns with padding
+// Calculate item height: poster (1.5x width) + info container padding (24) + title (36) + meta (20) + margin (16)
+const ITEM_HEIGHT = CARD_WIDTH * 1.5 + 96;
 
 const SearchScreen: React.FC<SearchScreenProps> = ({ navigation }) => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -87,6 +93,19 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ navigation }) => {
 
   // Optimized key extractor
   const keyExtractor = useCallback((item: Movie) => item.id.toString(), []);
+
+  // Optimized getItemLayout for better scroll performance
+  const getItemLayout = useCallback(
+    (_data: ArrayLike<Movie> | null | undefined, index: number) => {
+      const rowIndex = Math.floor(index / 2); // 2 columns per row
+      return {
+        length: ITEM_HEIGHT,
+        offset: ITEM_HEIGHT * rowIndex,
+        index,
+      };
+    },
+    []
+  );
 
   // Load more movies (pagination)
   const handleLoadMore = useCallback(() => {
@@ -184,6 +203,7 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ navigation }) => {
         data={movies}
         renderItem={renderItem}
         keyExtractor={keyExtractor}
+        getItemLayout={getItemLayout}
         numColumns={2}
         columnWrapperStyle={styles.row}
         contentContainerStyle={styles.listContent}
