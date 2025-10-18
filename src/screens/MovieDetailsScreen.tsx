@@ -64,7 +64,7 @@ const MovieDetailsScreen: React.FC<MovieDetailsScreenProps> = ({ route }) => {
 
   return (
     <SafeAreaView style={styles.container} edges={['bottom']}>
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView testID="movie-details-screen" showsVerticalScrollIndicator={false}>
         {/* Backdrop Image */}
         <View style={styles.backdropContainer}>
           <FastImage

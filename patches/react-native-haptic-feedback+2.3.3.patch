@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-native-haptic-feedback/RNReactNativeHapticFeedback.podspec b/node_modules/react-native-haptic-feedback/RNReactNativeHapticFeedback.podspec
+index 6ca2088..233b368 100644
+--- a/node_modules/react-native-haptic-feedback/RNReactNativeHapticFeedback.podspec
++++ b/node_modules/react-native-haptic-feedback/RNReactNativeHapticFeedback.podspec
+@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
+   s.license      = "MIT"
+   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+   s.author             = { "author" => "m.kuczera@gmail.com" }
+-  s.platform     = :ios, "12.4"
++  s.platform     = :ios, "12.0"
+   s.source       = { :git => "https://github.com/mkuczera/react-native-haptic-feedback.git", :tag => "v#{s.version.to_s}" }
+   s.source_files  = "ios/**/*.{h,m,mm}"
+   s.requires_arc = true

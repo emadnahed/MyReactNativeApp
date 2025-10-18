@@ -1,0 +1,35 @@
+appId: com.myreactnativeapp
+---
+# Movie Details Flow Test
+# This test verifies the movie details screen functionality
+
+- launchApp
+
+# Navigate to first movie
+- waitForAnimationToEnd
+- tapOn:
+    index: 0
+    id: "movie-card"
+
+# Verify all detail sections are present
+- assertVisible: "Overview"
+- assertVisible: "Rating"
+- assertVisible: "Year"
+- assertVisible: "Duration"
+
+# Scroll down to see more info
+- scroll
+- assertVisible: "Additional Info"
+
+# Verify status is shown
+- assertVisible: "Status"
+
+# Scroll more to see production companies
+- scroll
+- assertVisible: "Production Companies"
+
+# Go back
+- back
+
+# Verify navigation worked
+- assertVisible: "Popular Movies"
