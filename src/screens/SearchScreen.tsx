@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useCallback, useMemo, useEffect } from 'react';
 import {
   View,
   TextInput,
@@ -13,9 +13,9 @@ import {
   Dimensions,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useSearchMoviesQuery, useGetPopularMoviesQuery } from '../services/tmdb.api';
+import { useSmartMovieSearch, useCachedImages } from '../hooks';
+import { getImageUrl } from '../services/tmdb.api';
 import MovieCard from '../components/MovieCard';
-import LoadingSpinner from '../components/LoadingSpinner';
 import SkeletonMovieCard from '../components/SkeletonMovieCard';
 import ErrorView from '../components/ErrorView';
 import type { Movie } from '../types/movie.types';
@@ -28,53 +28,33 @@ const CARD_WIDTH = (width - 48) / 2; // 2 columns with padding
 const ITEM_HEIGHT = CARD_WIDTH * 1.5 + 96;
 
 const SearchScreen: React.FC<SearchScreenProps> = ({ navigation }) => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [debouncedQuery, setDebouncedQuery] = useState('');
-  const [page, setPage] = useState(1);
+  // Use smart search hook with automatic API routing
+  const {
+    movies,
+    isLoading,
+    error,
+    searchQuery,
+    setSearchQuery,
+    clearSearch,
+    loadMore,
+    refresh,
+    hasMore,
+    isSearching,
+    queryDescription,
+    apiMode,
+  } = useSmartMovieSearch({ debounceDelay: 500 });
 
-  // Debounce search query
-  const debounceTimer = React.useRef<NodeJS.Timeout>();
+  const { preloadImages } = useCachedImages();
 
-  const handleSearchChange = useCallback((text: string) => {
-    setSearchQuery(text);
-
-    if (debounceTimer.current) {
-      clearTimeout(debounceTimer.current);
+  // Preload images for better performance
+  useEffect(() => {
+    if (movies.length > 0) {
+      const imageUrls = movies
+        .filter(movie => movie.poster_path)
+        .map(movie => getImageUrl(movie.poster_path, 'w500'));
+      preloadImages(imageUrls, 'normal');
     }
-
-    debounceTimer.current = setTimeout(() => {
-      setDebouncedQuery(text);
-      setPage(1);
-    }, 500);
-  }, []);
-
-  // Use search query if available, otherwise show popular movies
-  const shouldSearch = debouncedQuery.trim().length > 0;
-
-  const {
-    data: searchData,
-    isLoading: isSearchLoading,
-    error: searchError,
-    refetch: refetchSearch,
-  } = useSearchMoviesQuery(
-    { query: debouncedQuery, page },
-    { skip: !shouldSearch }
-  );
-
-  const {
-    data: popularData,
-    isLoading: isPopularLoading,
-    error: popularError,
-    refetch: refetchPopular,
-  } = useGetPopularMoviesQuery(page, { skip: shouldSearch });
-
-  const data = shouldSearch ? searchData : popularData;
-  const isLoading = shouldSearch ? isSearchLoading : isPopularLoading;
-  const error = shouldSearch ? searchError : popularError;
-  const refetch = shouldSearch ? refetchSearch : refetchPopular;
-
-  const movies = useMemo(() => data?.results || [], [data]);
-  const totalPages = data?.total_pages || 0;
+  }, [movies, preloadImages]);
 
   // Navigate to movie details
   const handleMoviePress = useCallback(
@@ -110,16 +90,13 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ navigation }) => {
 
   // Load more movies (pagination)
   const handleLoadMore = useCallback(() => {
-    if (!isLoading && page < totalPages) {
-      setPage((prev) => prev + 1);
-    }
-  }, [isLoading, page, totalPages]);
+    loadMore();
+  }, [loadMore]);
 
   // Pull to refresh
   const handleRefresh = useCallback(() => {
-    setPage(1);
-    refetch();
-  }, [refetch]);
+    refresh();
+  }, [refresh]);
 
   // Footer component for loading more
   const ListFooterComponent = useMemo(() => {
@@ -155,7 +132,7 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ navigation }) => {
       );
     }
 
-    if (shouldSearch && debouncedQuery) {
+    if (isSearching && searchQuery) {
       return (
         <View
           style={styles.emptyContainer}
@@ -164,7 +141,7 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ navigation }) => {
           accessibilityRole="text"
         >
           <Text style={styles.emptyIcon} accessible={false}>🔍</Text>
-          <Text style={styles.emptyText}>No movies found for "{debouncedQuery}"</Text>
+          <Text style={styles.emptyText}>No movies found for "{searchQuery}"</Text>
           <Text style={styles.emptySubtext}>Try a different search term</Text>
         </View>
       );
@@ -182,13 +159,13 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ navigation }) => {
         <Text style={styles.emptySubtext}>Type in the search bar above</Text>
       </View>
     );
-  }, [isLoading, shouldSearch, debouncedQuery, movies.length]);
+  }, [isLoading, isSearching, searchQuery, movies.length]);
 
   if (error) {
     return (
       <ErrorView
         message="Failed to load movies. Please check your internet connection."
-        onRetry={refetch}
+        onRetry={refresh}
       />
     );
   }
@@ -208,7 +185,7 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ navigation }) => {
           placeholder="Search movies..."
           placeholderTextColor="#666666"
           value={searchQuery}
-          onChangeText={handleSearchChange}
+          onChangeText={setSearchQuery}
           returnKeyType="search"
           onSubmitEditing={Keyboard.dismiss}
           accessible={true}
@@ -218,11 +195,7 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ navigation }) => {
         {searchQuery.length > 0 && (
           <Text
             style={styles.clearButton}
-            onPress={() => {
-              setSearchQuery('');
-              setDebouncedQuery('');
-              setPage(1);
-            }}
+            onPress={clearSearch}
             accessible={true}
             accessibilityLabel="Clear search"
             accessibilityRole="button"
@@ -233,9 +206,16 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ navigation }) => {
       </View>
 
       {/* Header */}
-      <Text style={styles.header}>
-        {shouldSearch ? 'Search Results' : 'Popular Movies'}
-      </Text>
+      <View style={styles.headerContainer}>
+        <Text style={styles.header}>
+          {isSearching ? 'Search Results' : 'Popular Movies'}
+        </Text>
+        {__DEV__ && isSearching && (
+          <Text style={styles.debugText}>
+            Mode: {apiMode.toUpperCase()} • {queryDescription}
+          </Text>
+        )}
+      </View>
 
       {/* Movies List */}
       <FlatList
@@ -301,13 +281,20 @@ const styles = StyleSheet.create({
     fontSize: 20,
     padding: 4,
   },
+  headerContainer: {
+    marginHorizontal: 16,
+    marginBottom: 22,
+  },
   header: {
     color: '#FFFFFF',
     fontSize: 24,
     fontFamily: FontFamilies.Gilroy.Bold,
-    marginHorizontal: 16,
-    // marginVertical: 12,
-    marginBottom: 22,
+  },
+  debugText: {
+    color: '#666666',
+    fontSize: 10,
+    fontFamily: FontFamilies.Albra.RegularItalic,
+    marginTop: 4,
   },
   listContent: {
     paddingHorizontal: 16,

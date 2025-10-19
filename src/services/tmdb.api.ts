@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import type { MovieSearchResponse, MovieDetails } from '../types/movie.types';
+import type { DiscoverMovieParams } from '../types/discover.types';
 import { API_CONFIG } from '../config/api.config';
 
 
@@ -123,10 +124,32 @@ export const tmdbApi = createApi({
       }),
       providesTags: (_result, _error, id) => [{ type: 'Movies', id }],
     }),
+    discoverMovies: builder.query<MovieSearchResponse, DiscoverMovieParams>({
+      query: (params) => ({
+        url: '/discover/movie',
+        params: {
+          api_key: API_CONFIG.TMDB_API_KEY,
+          include_adult: false,
+          ...params,
+        },
+      }),
+      providesTags: (result) =>
+        result
+          ? [
+              ...result.results.map(({ id }) => ({ type: 'Movies' as const, id })),
+              { type: 'Movies', id: 'DISCOVER' },
+            ]
+          : [{ type: 'Movies', id: 'DISCOVER' }],
+    }),
   }),
 });
 
-export const { useSearchMoviesQuery, useGetPopularMoviesQuery, useGetMovieDetailsQuery } = tmdbApi;
+export const {
+  useSearchMoviesQuery,
+  useGetPopularMoviesQuery,
+  useGetMovieDetailsQuery,
+  useDiscoverMoviesQuery,
+} = tmdbApi;
 
 // Helper function to get image URL
 export const getImageUrl = (path: string | null, size: 'w200' | 'w500' | 'original' = 'w500'): string => {
