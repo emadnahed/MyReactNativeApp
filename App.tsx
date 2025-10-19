@@ -12,6 +12,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import ErrorBoundary from './src/components/ErrorBoundary';
+import PerformanceOverlay from './src/components/PerformanceOverlay';
 import SearchScreen from './src/screens/SearchScreen';
 import MovieDetailsScreen from './src/screens/MovieDetailsScreen';
 import { store } from './src/store';
@@ -154,6 +155,8 @@ function App(): JSX.Element {
               />
             </Stack.Navigator>
           </NavigationContainer>
+          {/* Performance monitoring overlay - only visible in DEV mode */}
+          {__DEV__ && <PerformanceOverlay position="bottom-right" />}
         </SafeAreaProvider>
       </Provider>
     </ErrorBoundary>
