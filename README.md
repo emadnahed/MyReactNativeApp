@@ -575,14 +575,36 @@ npm test -- --verbose
 
 See [TESTING.md](./TESTING.md) for testing-specific troubleshooting.
 
-## Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Write tests for your changes
-4. Commit your changes (`git commit -m 'Add amazing feature'`)
-5. Push to the branch (`git push origin feature/amazing-feature`)
-6. Open a Pull Request
+
+## Screenshots
+
+# IOS Homepage-Simulator
+![IOS Homepage-Simulator](image.png)
+
+# IOS Search-Feature-Simulator
+![IOS Search-Feature-Simulator](image-1.png)
+
+# IOS Movie-Details-Simulator
+![IOS Movie-Details-Simulator](image-2.png)
+
+# IOS Movie-Details-Part-2-Simulator
+![IOS Movie-Details-Part-2-Simulator](image-3.png)
+
+# Android Homepage-Simulator
+![Android Homepage-Simulator](image-4.png)
+
+# Android Search-Feature-Simulator
+![Android Search-Feature-Simulator](image-5.png)
+
+# Android Movie-Details-Simulator
+![Android Movie-Details-Simulator](image-6.png)
+
+# Android Movie-Details-Part-2-Simulator
+![Android Movie-Details-Part-2-Simulator](image-7.png)
+
+
+
 
 ## License
 
