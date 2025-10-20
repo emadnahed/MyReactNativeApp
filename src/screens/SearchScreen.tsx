@@ -155,7 +155,7 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ navigation }) => {
         accessibilityRole="text"
       >
         <Text style={styles.emptyIcon} accessible={false}>🎬</Text>
-        <Text style={styles.emptyText}>Search for movies</Text>
+        <Text style={styles.emptyText}>Loading....</Text>
         <Text style={styles.emptySubtext}>Type in the search bar above</Text>
       </View>
     );
