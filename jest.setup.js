@@ -2,10 +2,14 @@
 // Note: @testing-library/react-native v12.4+ includes built-in matchers
 // No need to import extend-expect separately
 
-// Mock react-native-dotenv
-jest.mock('react-native-dotenv', () => ({
-  TMDB_API_KEY: 'mock-api-key',
-  TMDB_BASE_URL: 'https://api.themoviedb.org/3',
+// Mock react-native-config
+jest.mock('react-native-config', () => ({
+  default: {
+    TMDB_API_KEY: 'mock-api-key',
+    TMDB_BASE_URL: 'https://api.themoviedb.org/3',
+    TMDB_IMAGE_BASE_URL: 'https://image.tmdb.org/t/p',
+    ENV: 'test',
+  },
 }));
 
 // Mock react-native-fast-image
